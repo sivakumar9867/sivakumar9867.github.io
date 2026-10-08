@@ -44,7 +44,7 @@ section{padding:105px 0}.head{display:flex;justify-content:space-between;gap:30p
 .timeline{position:relative}.timeline:before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:1px;background:var(--line)}.entry{position:relative;padding:0 0 34px 38px}.dot{position:absolute;left:4px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 6px rgba(119,169,255,.08)}
 .date{font-size:.72rem;color:var(--blue);font-weight:900;text-transform:uppercase;letter-spacing:.08em}
 .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}.tag{font-size:.72rem;color:#cbd8ec;border:1px solid var(--line);border-radius:999px;padding:5px 9px}
-.project{min-height:310px;display:flex;flex-direction:column;transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}.project:hover{transform:translateY(-5px);border-color:rgba(119,169,255,.28);box-shadow:0 18px 45px rgba(0,0,0,.22)}.project:before{transition:opacity .35s ease,transform .45s ease}.project:hover:before{opacity:1;transform:scale(1.06)}.project-no{font-size:4.5rem;line-height:.8;color:rgba(255,255,255,.055);font-weight:900;position:absolute;right:20px;top:18px}
+.project{min-height:350px;padding:28px;display:flex;flex-direction:column;transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}.project-content{display:flex;flex-direction:column;gap:11px;padding-right:6px}.project-content h3{margin:0 0 2px}.project-content p{margin:0;line-height:1.7}.project-content .tags{margin-top:3px}.project:hover{transform:translateY(-5px);border-color:rgba(119,169,255,.28);box-shadow:0 18px 45px rgba(0,0,0,.22)}.project:before{transition:opacity .35s ease,transform .45s ease}.project:hover:before{opacity:1;transform:scale(1.06)}.project-no{font-size:4.5rem;line-height:.8;color:rgba(255,255,255,.055);font-weight:900;position:absolute;right:20px;top:18px}
 .project-bottom{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:12px}.arrow{font-size:1.2rem}
 .skills{display:flex;flex-wrap:wrap;gap:9px}.skill{padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.025);color:#dce7fa;font-size:.86rem}
 .cert img{width:100%;height:175px;object-fit:cover;border-radius:13px;border:1px solid var(--line);background:#fff;margin-bottom:16px}.cert h3{margin-top:0}.cert .btn{font-size:.78rem;padding:8px 11px}
@@ -321,43 +321,43 @@ footer{padding:40px 0 55px;border-top:1px solid var(--line);color:var(--muted);f
 <section id="experience" class="section-reveal"><div class="wrap">
 <div class="head"><div><div class="kicker">02 / PROFESSIONAL EXPERIENCE</div><h2>Where I've learned.</h2></div></div>
 <div class="timeline">
-<div class="entry"><i class="dot"></i><div class="date">Jun 2025 — Jul 2025 · Remote</div><h3>Machine Learning Intern · IBM SkillsBuild & Edunet Foundation</h3><p class="muted">Developed an employee income classification model using Python and Scikit-learn, covering preprocessing, feature engineering, Random Forest, hyperparameter tuning and model evaluation.</p><div class="tags"><span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Random Forest</span><span class="tag">ML</span></div></div>
-<div class="entry"><i class="dot"></i><div class="date">May 2025 — Jun 2025 · Remote</div><h3>Python Intern · APSSDC</h3><p class="muted">Developed and tested a Flask-based Marks Calculator web application, connecting HTML inputs with Python application logic and debugging the workflow.</p><div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">HTML</span></div></div>
-<div class="entry"><i class="dot"></i><div class="date">Aug 2024 · Remote</div><h3>Generative AI Intern · Prodigy InfoTech</h3><p class="muted">Worked through foundational Generative AI concepts, tools and application workflows during a one-month internship.</p><div class="tags"><span class="tag">Generative AI</span><span class="tag">AI tools</span></div></div>
+<div class="entry"><i class="dot"></i><div class="date">Jun 2025 — Jul 2025 · Remote</div><h3>Machine Learning Intern · IBM SkillsBuild & Edunet Foundation</h3><p class="muted">Built an Employee Salary Prediction model using Python and Scikit-learn, applying data preprocessing, feature engineering, Random Forest classification, hyperparameter tuning, and model evaluation.</p><div class="tags"><span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Random Forest</span><span class="tag">ML</span></div></div>
+<div class="entry"><i class="dot"></i><div class="date">May 2025 — Jun 2025 · Remote</div><h3>Python Intern · APSSDC</h3><p class="muted">Built and tested a Flask-based Marks Calculator web application, connecting HTML inputs with Python application logic and debugging the workflow.</p><div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">HTML</span></div></div>
+<div class="entry"><i class="dot"></i><div class="date">Aug 2024 · Remote</div><h3>Generative AI Intern · Prodigy InfoTech</h3><p class="muted">Explored foundational Generative AI concepts, tools, and application workflows during a one-month internship.</p><div class="tags"><span class="tag">Generative AI</span><span class="tag">AI tools</span></div></div>
 </div></div></section>
 
 <section id="projects" class="section-reveal"><div class="wrap">
 <div class="head"><div><div class="kicker">03 / Projects</div><h2>Selected work.</h2></div><p>Hands-on projects across machine learning, recommendation systems, Python web development and data-driven analysis.</p></div>
 <div class="grid two">
 
-<article class="card project"><span class="project-no">01</span><div>
+<article class="card project"><span class="project-no">01</span><div class="project-content">
 <div class="label">Python · Machine Learning</div>
 <h3>Employee Salary Prediction</h3>
-<p>Developed an Employee Salary Prediction model using the Adult Census Income dataset to classify whether annual income is above or below $50K.</p>
+<p>Built an Employee Salary Prediction model using the Adult Census Income dataset to classify whether annual income is above or below $50K.</p>
 <p><strong>Highlights:</strong> handled unknown categorical values and encoded features using Label Encoding, applied Min-Max Scaling and an 80/20 stratified train-test split, and compared three classification models.</p>
 <p><strong>Model Results:</strong> KNN — 82.69% · Logistic Regression — 82.73% · MLP — <strong>85.18%</strong> (highest accuracy)</p>
 <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span><span class="tag">MLP</span><span class="tag">KNN</span></div>
 </div><div class="project-bottom"><span class="muted">Machine Learning</span><a class="btn" href="https://github.com/sivakumar9867/Employee-Salary-Prediction" target="_blank" rel="noopener">View Project ↗</a></div></article>
 
-<article class="card project"><span class="project-no">02</span><div>
+<article class="card project"><span class="project-no">02</span><div class="project-content">
 <div class="label">Python · Machine Learning</div>
 <h3>Movie Recommendation System</h3>
-<p>Developed a movie recommendation system by preprocessing movie data, engineering features, and generating recommendations from movie characteristics and user preferences.</p>
+<p>Created a movie recommendation system by preprocessing movie data, engineering features, and generating recommendations from movie characteristics and user preferences.</p>
 <div class="tags"><span class="tag">Python</span><span class="tag">Machine Learning</span><span class="tag">Recommendation</span><span class="tag">Feature Engineering</span></div>
-</div><div class="project-bottom"><span class="muted">Recommendation System</span><a class="btn" href="https://github.com/sivakumar9867/movie-recommendation-system" target="_blank">View Project ↗</a></div></article>
+</div><div class="project-bottom"><span class="muted">Recommendation System</span><a class="btn" href="https://github.com/sivakumar9867/movie-recommendation-system" target="_blank" rel="noopener">View Project ↗</a></div></article>
 
-<article class="card project"><span class="project-no">03</span><div>
+<article class="card project"><span class="project-no">03</span><div class="project-content">
 <div class="label">Python · Flask · HTML</div>
 <h3>Marks Calculator</h3>
 <p>Built and debugged a Flask-based web application for calculating student marks using Python and HTML, with a simple input-to-result workflow.</p>
 <p><strong>Highlights:</strong> connected the web interface with Python logic and focused on input handling, calculation and a straightforward user experience.</p>
 <div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">HTML</span><span class="tag">Web App</span></div>
-</div><div class="project-bottom"><span class="muted">Web Application</span><a class="btn" href="https://github.com/sivakumar9867/marks-calculator" target="_blank">View Project ↗</a></div></article>
+</div><div class="project-bottom"><span class="muted">Web Application</span><a class="btn" href="https://github.com/sivakumar9867/marks-calculator" target="_blank" rel="noopener">View Project ↗</a></div></article>
 
-<article class="card project"><span class="project-no">04</span><div>
+<article class="card project"><span class="project-no">04</span><div class="project-content">
 <div class="label">AI/ML · Team Project</div>
 <h3>AI-Based Agri-Flow Intelligence</h3>
-<p>Developed a Python-based agricultural cost and profitability analysis system for Indian crops, calculating Total Cost of Production, Net Farm Income, Benefit-Cost Ratio and break-even metrics.</p>
+<p>Built a Python-based agricultural cost and profitability analysis system for Indian crops, calculating Total Cost of Production, Net Farm Income, Benefit-Cost Ratio and break-even metrics.</p>
 <p><strong>Highlights:</strong> integrated MSP, mandi prices and government subsidies, performed ±20% sensitivity analysis, generated sustainability-based recommendations, and created financial visualizations.</p>
 <div class="tags"><span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">Data Modelling</span><span class="tag">Sensitivity Analysis</span></div>
 </div><div class="project-bottom"><span class="muted">Team Project</span><a class="btn" href="https://github.com/sivakumar9867/AI-Based-Agri-Flow-Intelligence" target="_blank" rel="noopener">View Project ↗</a></div></article>
