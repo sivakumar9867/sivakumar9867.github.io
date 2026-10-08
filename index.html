@@ -44,7 +44,7 @@ section{padding:105px 0}.head{display:flex;justify-content:space-between;gap:30p
 .timeline{position:relative}.timeline:before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:1px;background:var(--line)}.entry{position:relative;padding:0 0 34px 38px}.dot{position:absolute;left:4px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 6px rgba(119,169,255,.08)}
 .date{font-size:.72rem;color:var(--blue);font-weight:900;text-transform:uppercase;letter-spacing:.08em}
 .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}.tag{font-size:.72rem;color:#cbd8ec;border:1px solid var(--line);border-radius:999px;padding:5px 9px}
-.project{min-height:310px;display:flex;flex-direction:column}.project-no{font-size:4.5rem;line-height:.8;color:rgba(255,255,255,.055);font-weight:900;position:absolute;right:20px;top:18px}
+.project{min-height:310px;display:flex;flex-direction:column;transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}.project:hover{transform:translateY(-5px);border-color:rgba(119,169,255,.28);box-shadow:0 18px 45px rgba(0,0,0,.22)}.project:before{transition:opacity .35s ease,transform .45s ease}.project:hover:before{opacity:1;transform:scale(1.06)}.project-no{font-size:4.5rem;line-height:.8;color:rgba(255,255,255,.055);font-weight:900;position:absolute;right:20px;top:18px}
 .project-bottom{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:12px}.arrow{font-size:1.2rem}
 .skills{display:flex;flex-wrap:wrap;gap:9px}.skill{padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.025);color:#dce7fa;font-size:.86rem}
 .cert img{width:100%;height:175px;object-fit:cover;border-radius:13px;border:1px solid var(--line);background:#fff;margin-bottom:16px}.cert h3{margin-top:0}.cert .btn{font-size:.78rem;padding:8px 11px}
@@ -145,6 +145,7 @@ footer{padding:40px 0 55px;border-top:1px solid var(--line);color:var(--muted);f
 }
 
 /* Languages & DSA skill pills */
+.skill-subhead{margin:14px 0 8px;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:900}.skill-subhead:first-of-type{margin-top:0}
 .skills .skill{
   display:inline-flex;
   align-items:center;
@@ -313,26 +314,26 @@ footer{padding:40px 0 55px;border-top:1px solid var(--line);color:var(--muted);f
 
 <section id="about" class="section-reveal"><div class="wrap">
 <div class="head"><div><div class="kicker">01 / About</div><h2>Learning by building · AWS.</h2></div><p>A placement-focused developer profile built around programming fundamentals, DSA, software development and AI/ML.</p></div>
-<div class="about"><div class="card large"><p>I am pursuing a B.Tech in Computer Science & Engineering with an AI specialization at Parul University. My current technical focus includes <b>C++, C, Python, SQL, data structures, algorithms and OOP</b>, supported by hands-on work with Flask, Scikit-learn, Git and GitHub.</p><p class="quote">My goal is simple: become stronger at problem solving and build software that actually works.</p></div>
+<div class="about"><div class="card large"><p>I am pursuing a B.Tech in Computer Science & Engineering with an AI specialization at Parul University. My current technical focus includes <b>C++, C, Python, SQL, data structures, algorithms and OOP</b>, supported by hands-on work with Flask, Scikit-learn, Git and GitHub.</p><p class="quote">I enjoy solving practical problems, building reliable software, and continuously improving through hands-on projects.</p></div>
 <div class="facts"><div class="fact"><b>Education</b><span>B.Tech CSE — AI specialization</span></div><div class="fact"><b>University</b><span>Parul University · 2023–2027</span></div><div class="fact"><b>Current direction</b><span>Software development · Algorithms · AI/ML</span></div></div></div>
 </div></section>
 
 <section id="experience" class="section-reveal"><div class="wrap">
 <div class="head"><div><div class="kicker">02 / PROFESSIONAL EXPERIENCE</div><h2>Where I've learned.</h2></div></div>
 <div class="timeline">
-<div class="entry"><i class="dot"></i><div class="date">Jun 2025 — Jul 2025 · Remote</div><h3>Machine Learning Intern · IBM SkillsBuild & Edunet Foundation</h3><p class="muted">Built an employee salary prediction model using Python and Scikit-learn. Worked with preprocessing, feature engineering, Random Forest, hyperparameter tuning and model evaluation.</p><div class="tags"><span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Random Forest</span><span class="tag">ML</span></div></div>
-<div class="entry"><i class="dot"></i><div class="date">May 2025 — Jun 2025 · Remote</div><h3>Python Intern · APSSDC</h3><p class="muted">Developed a Marks Calculator web application using Python, Flask and HTML, including application logic, testing and debugging.</p><div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">HTML</span></div></div>
-<div class="entry"><i class="dot"></i><div class="date">Aug 2024 · Remote</div><h3>Generative AI Intern · Prodigy InfoTech</h3><p class="muted">Explored Generative AI concepts and applications, AI tools and workflows, and foundational techniques during a one-month internship.</p><div class="tags"><span class="tag">Generative AI</span><span class="tag">AI tools</span></div></div>
+<div class="entry"><i class="dot"></i><div class="date">Jun 2025 — Jul 2025 · Remote</div><h3>Machine Learning Intern · IBM SkillsBuild & Edunet Foundation</h3><p class="muted">Developed an employee income classification model using Python and Scikit-learn, covering preprocessing, feature engineering, Random Forest, hyperparameter tuning and model evaluation.</p><div class="tags"><span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Random Forest</span><span class="tag">ML</span></div></div>
+<div class="entry"><i class="dot"></i><div class="date">May 2025 — Jun 2025 · Remote</div><h3>Python Intern · APSSDC</h3><p class="muted">Developed and tested a Flask-based Marks Calculator web application, connecting HTML inputs with Python application logic and debugging the workflow.</p><div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">HTML</span></div></div>
+<div class="entry"><i class="dot"></i><div class="date">Aug 2024 · Remote</div><h3>Generative AI Intern · Prodigy InfoTech</h3><p class="muted">Worked through foundational Generative AI concepts, tools and application workflows during a one-month internship.</p><div class="tags"><span class="tag">Generative AI</span><span class="tag">AI tools</span></div></div>
 </div></div></section>
 
 <section id="projects" class="section-reveal"><div class="wrap">
-<div class="head"><div><div class="kicker">03 / Projects</div><h2>Selected work.</h2></div><p>Hands-on projects across machine learning, recommendation systems and Python web development.</p></div>
+<div class="head"><div><div class="kicker">03 / Projects</div><h2>Selected work.</h2></div><p>Hands-on projects across machine learning, recommendation systems, Python web development and data-driven analysis.</p></div>
 <div class="grid two">
 
 <article class="card project"><span class="project-no">01</span><div>
 <div class="label">Python · Machine Learning</div>
 <h3>Employee Salary Prediction</h3>
-<p>Built an income classification model using the Adult Census Income dataset to predict whether annual income is above or below $50K.</p>
+<p>Built a machine learning model using the Adult Census Income dataset to classify whether annual income is above or below $50K.</p>
 <p><strong>Highlights:</strong> cleaned unknown categorical values, encoded categorical features, applied Min-Max scaling, used stratified train-test splitting, and compared KNN, Logistic Regression and MLP models. The MLP achieved 85.18% accuracy among the tested models.</p>
 <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span><span class="tag">MLP</span><span class="tag">KNN</span></div>
 </div><div class="project-bottom"><span class="muted">Machine Learning</span><a class="btn" href="https://github.com/sivakumar9867/Employee-Salary-Prediction" target="_blank">View Project ↗</a></div></article>
@@ -340,14 +341,14 @@ footer{padding:40px 0 55px;border-top:1px solid var(--line);color:var(--muted);f
 <article class="card project"><span class="project-no">02</span><div>
 <div class="label">Python · Machine Learning</div>
 <h3>Movie Recommendation System</h3>
-<p>Developed a movie recommendation project using data preprocessing and feature engineering to generate recommendations based on movie characteristics and user preferences.</p>
+<p>Developed a movie recommendation system by preprocessing movie data, engineering features, and generating recommendations from movie characteristics and user preferences.</p>
 <div class="tags"><span class="tag">Python</span><span class="tag">Machine Learning</span><span class="tag">Recommendation</span><span class="tag">Feature Engineering</span></div>
 </div><div class="project-bottom"><span class="muted">Recommendation System</span><a class="btn" href="https://github.com/sivakumar9867/movie-recommendation-system" target="_blank">View Project ↗</a></div></article>
 
 <article class="card project"><span class="project-no">03</span><div>
 <div class="label">Python · Flask · HTML</div>
 <h3>Marks Calculator</h3>
-<p>Built a simple web application for calculating student marks using Python and HTML, with Flask-based application logic.</p>
+<p>Built and debugged a Flask-based web application for calculating student marks using Python and HTML, with a simple input-to-result workflow.</p>
 <p><strong>Highlights:</strong> connected the web interface with Python logic and focused on input handling, calculation and a straightforward user experience.</p>
 <div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">HTML</span><span class="tag">Web App</span></div>
 </div><div class="project-bottom"><span class="muted">Web Application</span><a class="btn" href="https://github.com/sivakumar9867/marks-calculator" target="_blank">View Project ↗</a></div></article>
@@ -356,20 +357,21 @@ footer{padding:40px 0 55px;border-top:1px solid var(--line);color:var(--muted);f
 <div class="label">AI/ML · Team Project</div>
 <h3>AI-Based Agri-Flow Intelligence</h3>
 <p>Developed a Python-based agricultural cost and profitability analysis system for Indian crops, calculating Total Cost of Production, Net Farm Income, Benefit-Cost Ratio and break-even metrics.</p>
+<p><strong>Highlights:</strong> integrated MSP, mandi prices and government subsidies, performed ±20% sensitivity analysis, generated sustainability-based recommendations, and created financial visualizations.</p>
 <div class="tags"><span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><span class="tag">Data Modelling</span><span class="tag">Sensitivity Analysis</span></div>
-</div><div class="project-bottom"><span class="muted">Team Project</span><a class="muted" href="https://github.com/sivakumar9867/AI-Based-Agri-Flow-Intelligence" target="_blank" rel="noopener">View Project ↗</a></div></article>
+</div><div class="project-bottom"><span class="muted">Team Project</span><a class="btn" href="https://github.com/sivakumar9867/AI-Based-Agri-Flow-Intelligence" target="_blank" rel="noopener">View Project ↗</a></div></article>
 
 </div></div></section>
 
 <section id="skills" class="section-reveal"><div class="wrap">
 <div class="head"><div><div class="kicker">04 / Skills</div><h2>My toolkit.</h2></div></div>
 <div class="grid two">
-<div class="card"><div class="label">Programming</div><h3>Languages & DSA</h3><div class="skills"><span class="skill">C++</span><span class="skill">C</span><span class="skill">Python</span><span class="skill">SQL</span><span class="skill">Data Structures</span><span class="skill">Algorithms</span><span class="skill">Problem Solving</span><span class="skill">Searching</span><span class="skill">Sorting</span><span class="skill">OOP</span></div></div>
+<div class="card"><div class="label">Programming</div><h3>Languages & DSA</h3><div class="skill-subhead">Languages & OOP</div><div class="skills"><span class="skill">C++</span><span class="skill">C</span><span class="skill">Python</span><span class="skill">SQL</span><span class="skill">OOP</span></div><div class="skill-subhead">DSA & Problem Solving</div><div class="skills"><span class="skill">Data Structures</span><span class="skill">Algorithms</span><span class="skill">Problem Solving</span><span class="skill">Searching</span><span class="skill">Sorting</span></div></div>
 <div class="card"><div class="label">Tools</div><h3>Tools & Technologies</h3><div class="skills"><span class="skill">Flask</span><span class="skill">HTML</span><span class="skill">Machine Learning</span><span class="skill">Scikit-learn</span><span class="skill">Data Preprocessing</span><span class="skill">Feature Engineering</span><span class="skill">Git</span><span class="skill">GitHub</span><span class="skill">VS Code</span><span class="skill">Debugging</span><span class="skill">Testing</span><span class="skill">Code Optimization</span></div></div>
 <div class="card aws-toolkit-card"><div class="label">AWS</div><h3>AWS Services</h3><div class="skills">
 <span class="skill">AWS</span><span class="skill">EC2</span><span class="skill">S3</span><span class="skill">IAM</span>
 <span class="skill">VPC</span><span class="skill">Lambda</span><span class="skill">RDS</span><span class="skill">CloudWatch</span><span class="skill">EFS</span>
-</div></div></div>
+</div></div>
 </div></div></section>
 
 
@@ -449,9 +451,9 @@ footer{padding:40px 0 55px;border-top:1px solid var(--line);color:var(--muted);f
 <div class="head"><div><div class="kicker">06 / CERTIFICATIONS</div><h2>Credentials.</h2></div><p>A selection of certifications, internships, and learning milestones.</p></div>
 
 <div class="grid three featured-certs">
-<div class="card cert featured-cert"><img src="./assets/previews/edunet-ai-ml.png" alt="Edunet Foundation Artificial Intelligence and Machine Learning certificate"><div class="label">2025 · 6 weeks</div><h3>Artificial Intelligence & Machine Learning</h3><p>Edunet Foundation in collaboration with AICTE, implemented through IBM SkillsBuild.</p><a class="btn" href="assets/certificates/edunet-ai-ml.pdf" target="_blank">Open certificate ↗</a></div>
-<div class="card cert featured-cert"><img src="./assets/previews/apssdc-python.png" alt="APSSDC Python Programming certificate"><div class="label">2025 · Summer Internship</div><h3>Python Programming</h3><p>Andhra Pradesh State Skill Development Corporation — Summer Online Internship Program 2025.</p><a class="btn" href="assets/certificates/apssdc-python.pdf" target="_blank">Open certificate ↗</a></div>
-<div class="card cert featured-cert"><img src="./assets/previews/prodigy-genai.jpg" alt="Prodigy InfoTech Generative AI certificate"><div class="label">2024 · 1 month</div><h3>Generative AI</h3><p>Prodigy InfoTech — internship completed from 1 August to 31 August 2024.</p><a class="btn" href="assets/certificates/prodigy-genai.pdf" target="_blank">Open certificate ↗</a></div>
+<div class="card cert featured-cert"><img src="./assets/previews/edunet-ai-ml.png" alt="Edunet Foundation Artificial Intelligence and Machine Learning certificate"><div class="label">2025 · 6 WEEKS</div><h3>Artificial Intelligence & Machine Learning</h3><p>Edunet Foundation in collaboration with AICTE, implemented through IBM SkillsBuild.</p><a class="btn" href="assets/certificates/edunet-ai-ml.pdf" target="_blank">Open certificate ↗</a></div>
+<div class="card cert featured-cert"><img src="./assets/previews/apssdc-python.png" alt="APSSDC Python Programming certificate"><div class="label">2025 · SUMMER INTERNSHIP</div><h3>Python Programming</h3><p>Andhra Pradesh State Skill Development Corporation — Summer Online Internship Program 2025.</p><a class="btn" href="assets/certificates/apssdc-python.pdf" target="_blank">Open certificate ↗</a></div>
+<div class="card cert featured-cert"><img src="./assets/previews/prodigy-genai.jpg" alt="Prodigy InfoTech Generative AI certificate"><div class="label">2024 · 1 MONTH</div><h3>Generative AI</h3><p>Prodigy InfoTech — internship completed from 1 August to 31 August 2024.</p><a class="btn" href="assets/certificates/prodigy-genai.pdf" target="_blank">Open certificate ↗</a></div>
 </div>
 
 <div class="minor-head"><div><div class="kicker">Additional Certifications</div><p>Additional certifications and learning milestones.</p></div></div>
