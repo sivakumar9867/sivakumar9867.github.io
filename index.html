@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Derangula Siva Kumar — Computer Science student, programmer and AI/ML enthusiast.">
+<title>Siva Kumar — Developer Portfolio</title>
+<style>
+:root{
+ --bg:#05070c;--surface:#0b1019;--surface2:#101725;--text:#f4f7fb;--muted:#96a2b7;
+ --line:rgba(255,255,255,.09);--blue:#77a9ff;--violet:#9a83ff;--green:#79d9a1;
+ --max:1160px;--r:22px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:
+ radial-gradient(circle at 10% 0%,rgba(119,169,255,.13),transparent 27%),
+ radial-gradient(circle at 90% 8%,rgba(154,131,255,.11),transparent 25%),var(--bg);
+ color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
+a{text-decoration:none;color:inherit}.wrap{width:min(92%,var(--max));margin:auto}
+nav{position:fixed;z-index:50;top:14px;left:50%;transform:translateX(-50%);width:min(94%,1050px);
+ border:1px solid var(--line);border-radius:18px;background:rgba(8,11,18,.76);backdrop-filter:blur(18px)}
+.nav{height:60px;padding:0 14px 0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.05rem;font-weight:900}.logo b{color:var(--blue)}.links{display:flex;gap:21px;color:var(--muted);font-size:.87rem}
+.links a:hover{color:#fff}.resume{padding:9px 14px;border:1px solid var(--line);border-radius:11px;font-weight:800;font-size:.85rem}
+.hero{min-height:100vh;display:flex;align-items:center;padding:130px 0 80px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:480px;height:480px;border:1px solid rgba(119,169,255,.09);border-radius:50%;right:-190px;bottom:-200px}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:7px 11px;border:1px solid var(--line);border-radius:999px;color:#cad7ed;background:rgba(255,255,255,.025);font-size:.8rem}
+.pulse{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(121,217,161,.1)}
+h1{font-size:clamp(3.5rem,8vw,7.2rem);line-height:.9;letter-spacing:-.075em;margin:22px 0;max-width:980px}
+.grad{background:linear-gradient(115deg,#fff 10%,#a8c8ff 54%,#a98dff);color:transparent;background-clip:text;-webkit-background-clip:text}
+.hero-copy{max-width:720px;color:var(--muted);font-size:1.1rem}.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:11px 16px;border-radius:12px;border:1px solid var(--line);background:var(--surface2);font-weight:800;transition:.2s}
+.btn:hover{transform:translateY(-2px);border-color:rgba(119,169,255,.45)}
+.primary{border:0;background:linear-gradient(120deg,var(--blue),var(--violet));color:#07101d}
+.mini{display:flex;gap:26px;margin-top:55px;flex-wrap:wrap}.mini div{border-left:1px solid var(--line);padding-left:15px}.mini strong{display:block;font-size:1.35rem}.mini span{font-size:.76rem;color:var(--muted)}
+section{padding:105px 0}.head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:32px}
+.kicker{text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;font-weight:900;color:var(--blue)}h2{font-size:clamp(2.1rem,4vw,3.6rem);line-height:1;letter-spacing:-.055em;margin:7px 0}
+.head p{max-width:480px;color:var(--muted);margin:0}.grid{display:grid;gap:17px}.two{grid-template-columns:repeat(2,minmax(0,1fr))}.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(145deg,rgba(16,23,37,.9),rgba(8,12,20,.92));padding:24px;position:relative;overflow:hidden}
+.card:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(119,169,255,.06),transparent 45%);pointer-events:none}
+.card>*{position:relative}.label{font-size:.73rem;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);font-weight:900}
+.card h3{margin:9px 0 8px;font-size:1.2rem}.card p{color:var(--muted);font-size:.93rem}
+.about{display:grid;grid-template-columns:1.25fr .75fr;gap:17px}.about .large{padding:32px}.about .large p{font-size:1.04rem;max-width:700px}
+.quote{border-left:2px solid var(--blue);padding-left:17px;margin-top:25px;color:#d7e1f2}.facts{display:grid;gap:10px}.fact{padding:15px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.02)}.fact b{display:block}.fact span{color:var(--muted);font-size:.82rem}
+.timeline{position:relative}.timeline:before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:1px;background:var(--line)}.entry{position:relative;padding:0 0 34px 38px}.dot{position:absolute;left:4px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 6px rgba(119,169,255,.08)}
+.date{font-size:.72rem;color:var(--blue);font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}.tag{font-size:.72rem;color:#cbd8ec;border:1px solid var(--line);border-radius:999px;padding:5px 9px}
+.project{min-height:310px;display:flex;flex-direction:column}.project-no{font-size:4.5rem;line-height:.8;color:rgba(255,255,255,.055);font-weight:900;position:absolute;right:20px;top:18px}
+.project-bottom{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:12px}.arrow{font-size:1.2rem}
+.skills{display:flex;flex-wrap:wrap;gap:9px}.skill{padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.025);color:#dce7fa;font-size:.86rem}
+.cert img{width:100%;height:175px;object-fit:cover;border-radius:13px;border:1px solid var(--line);background:#fff;margin-bottom:16px}.cert h3{margin-top:0}.cert .btn{font-size:.78rem;padding:8px 11px}
+.contact{display:grid;grid-template-columns:1.2fr .8fr;gap:17px}.contact-main{padding:32px}.contact-main h2{max-width:600px}.contact-links{display:grid;gap:9px;margin-top:24px}.contact-links a{padding:14px 15px;border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.025);color:#dce7fa}
+footer{padding:40px 0 55px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;gap:20px}
+.reveal{opacity:0;transform:translateY(22px);transition:.65s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:850px){.links{display:none}.about,.contact,.two,.three{grid-template-columns:1fr}.head{display:block}.head p{margin-top:12px}.hero{min-height:auto;padding:145px 0 90px}section{padding:75px 0}.mini{margin-top:35px}footer{display:block}footer div+div{margin-top:8px}}
+
+/* Certification hierarchy */
+.featured-certs .featured-cert img{height:175px;object-fit:cover}
+.featured-certs .featured-cert{min-height:0}
+.featured-certs .featured-cert .btn{margin-top:2px}
+.minor-head{display:flex;justify-content:space-between;align-items:end;margin:44px 0 16px;padding-top:8px;border-top:1px solid var(--line)}
+.minor-head p{margin:7px 0 0;color:var(--muted);font-size:.88rem}
+.minor-certs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.minor-cert{
+  display:grid;grid-template-columns:112px 1fr;gap:14px;align-items:center;
+  padding:11px;border:1px solid var(--line);border-radius:15px;
+  background:rgba(255,255,255,.018);transition:.2s ease
+}
+.minor-cert:hover{border-color:rgba(119,169,255,.3);transform:translateY(-2px)}
+.minor-thumb{display:block;height:78px;border-radius:9px;overflow:hidden;background:#fff;border:1px solid var(--line)}
+.minor-thumb img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.minor-info{min-width:0}
+.minor-meta{font-size:.66rem;color:var(--blue);font-weight:900;text-transform:uppercase;letter-spacing:.06em;line-height:1.35}
+.minor-cert h3{font-size:.95rem;line-height:1.25;margin:5px 0 7px}
+.minor-link{font-size:.72rem;color:#dce7fa;text-decoration:none}
+.minor-link:hover{color:var(--blue)}
+@media(max-width:850px){.minor-certs{grid-template-columns:1fr}}
+
+/* AWS hands-on experience */
+.aws-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.aws-group{min-height:290px;display:flex;flex-direction:column;justify-content:space-between}
+.aws-group-top{display:flex;justify-content:space-between;align-items:center}
+.aws-count{font-size:.7rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:5px 9px}
+.aws-group .btn{align-self:flex-start}
+.aws-flow{
+  margin-top:20px;padding:14px 17px;border:1px solid var(--line);border-radius:14px;
+  color:var(--muted);font-size:.78rem;display:flex;justify-content:center;gap:12px;flex-wrap:wrap
+}
+.aws-modal,.aws-proof-modal{position:fixed;inset:0;z-index:100;display:none}
+.aws-modal.is-open,.aws-proof-modal.is-open{display:block}
+.aws-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.72);backdrop-filter:blur(9px)}
+.aws-panel,.aws-proof-panel{
+  position:relative;z-index:2;width:min(1100px,calc(100% - 28px));max-height:92vh;overflow:auto;
+  margin:6vh auto 0;padding:30px;border:1px solid var(--line);border-radius:24px;
+  background:#0d121a;box-shadow:0 30px 100px rgba(0,0,0,.5)
+}
+.aws-close{
+  position:absolute;right:18px;top:15px;border:0;background:transparent;color:var(--muted);
+  font-size:30px;cursor:pointer;line-height:1
+}
+.aws-modal h2,.aws-proof-modal h2{font-size:34px;margin:8px 0}
+.aws-modal-intro,.aws-proof-panel>p{color:var(--muted)}
+.aws-task-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:22px}
+.aws-task{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:15px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025)
+}
+.aws-task:hover{border-color:rgba(119,169,255,.35)}
+.aws-task-title{font-size:.9rem;font-weight:700}
+.aws-task-type{font-size:.68rem;color:var(--muted);margin-top:3px}
+.aws-task button{white-space:nowrap}
+.proof-placeholder{
+  margin-top:24px;min-height:300px;border:1px dashed rgba(119,169,255,.35);border-radius:18px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;
+  background:rgba(255,255,255,.02)
+}
+.proof-icon{
+  width:60px;height:60px;border-radius:16px;display:grid;place-items:center;
+  border:1px solid var(--line);font-weight:900;color:var(--blue);margin-bottom:14px
+}
+.proof-placeholder h3{margin:0 0 7px}
+.proof-placeholder p{max-width:460px;color:var(--muted);font-size:.85rem;margin:0}
+@media(max-width:850px){.aws-groups{grid-template-columns:1fr}.aws-task-list{grid-template-columns:1fr}}
+
+/* AWS section visibility refinement */
+#aws{position:relative}
+#aws .head{margin-bottom:34px}
+#aws .head h2{max-width:760px}
+#aws .head>p{max-width:500px}
+#aws .aws-group{
+  background:linear-gradient(145deg,rgba(18,27,40,.98),rgba(10,15,23,.98));
+  border-color:rgba(119,169,255,.20);
+}
+#aws .aws-group .btn{
+  color:#f4f7ff !important;
+  background:rgba(119,169,255,.10);
+  border-color:rgba(119,169,255,.28);
+}
+#aws .aws-group .btn:hover{
+  color:#05080d !important;
+  background:#77a9ff;
+  border-color:#77a9ff;
+}
+#aws .aws-flow{
+  background:rgba(119,169,255,.035);
+}
+
+/* Languages & DSA skill pills */
+.skills .skill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  vertical-align:middle;
+  line-height:1.15;
+  box-sizing:border-box;
+}
+
+/* AWS atmospheric bubble-letter background */
+#aws{overflow:hidden}
+#aws::before{
+  content:"AWS  CLOUD  EC2  S3  IAM  VPC  RDS  LAMBDA  DNS  EFS  EBS  AWS  CLOUD";
+  position:absolute;
+  inset:18px -8% auto -8%;
+  height:92%;
+  z-index:0;
+  pointer-events:none;
+  display:block;
+  font-size:clamp(34px,5.8vw,86px);
+  font-weight:900;
+  line-height:1.75;
+  letter-spacing:.08em;
+  word-spacing:.35em;
+  color:rgba(119,169,255,.028);
+  text-transform:uppercase;
+  transform:rotate(-7deg);
+  white-space:normal;
+}
+#aws::after{
+  content:"";
+  position:absolute;
+  width:420px;
+  height:420px;
+  right:-150px;
+  top:150px;
+  border-radius:50%;
+  border:1px solid rgba(119,169,255,.08);
+  box-shadow:
+    -230px 210px 0 -55px rgba(119,169,255,.018),
+    -480px 40px 0 -85px rgba(119,169,255,.014),
+    -690px 300px 0 -105px rgba(119,169,255,.012);
+  pointer-events:none;
+  z-index:0;
+}
+#aws>.wrap{position:relative;z-index:1}
+.aws-groups,.aws-flow{position:relative;z-index:1}
+
+/* AWS action buttons: readable on dark surfaces */
+#aws .btn,.aws-panel .btn,.aws-proof-panel .btn{color:#f4f7ff !important;text-shadow:none}
+#aws .btn:hover,.aws-panel .btn:hover,.aws-proof-panel .btn:hover{color:#05080d !important}
+.aws-proof-content{margin-top:22px;display:grid;gap:14px}.aws-proof-card{border:1px solid var(--line);border-radius:16px;padding:18px;background:rgba(255,255,255,.025)}.aws-proof-card h3{margin:0 0 8px;font-size:.92rem}.aws-proof-card p{margin:0;color:#c8d4e8;line-height:1.7;font-size:.88rem}.aws-proof-card strong{color:#f4f7ff}
+
+.aws-proof-card ul{margin:0;padding-left:20px;color:#c8d4e8;line-height:1.72;font-size:.9rem}
+.aws-proof-card li{margin:5px 0}
+.aws-proof-viewer{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#080c12}
+.aws-proof-viewer iframe{display:block;width:100%;height:620px;border:0;background:#fff}
+.aws-proof-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.aws-proof-actions .btn{display:inline-flex;text-decoration:none}
+
+/* Final toolkit layout */
+.aws-toolkit-card{grid-column:1 / -1}
+@media (max-width:760px){.aws-toolkit-card{grid-column:auto}}
+
+
+/* Compact AWS evidence preview */
+.aws-proof-preview{
+  position:relative;
+  width:min(680px,78%);
+  margin:14px auto 0;
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+  background:#f4f4f4;
+  box-shadow:0 10px 28px rgba(0,0,0,.10);
+}
+.aws-proof-preview img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:430px;
+  object-fit:contain;
+  object-position:top center;
+  background:#f4f4f4;
+}
+@media (max-width:760px){
+  .aws-proof-preview{width:92%}
+  .aws-proof-preview img{max-height:360px}
+}
+
+
+
+
+
+/* Continuous sliding section highlight */
+.nav .links{
+  position:relative;
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+.nav .links a{
+  position:relative;
+  z-index:2;
+  transition:color .35s ease, text-shadow .35s ease;
+}
+.nav .links a.section-active{
+  color:#8fb8ff;
+  text-shadow:0 0 18px rgba(91,151,255,.65);
+}
+.nav .links .nav-active-line{
+  position:absolute;
+  z-index:1;
+  left:0;
+  bottom:-9px;
+  height:3px;
+  width:60px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#4d91ff,#c1dcff,#4d91ff);
+  background-size:200% 100%;
+  box-shadow:0 0 10px rgba(77,145,255,.95),0 0 24px rgba(77,145,255,.45);
+  pointer-events:none;
+  transform:translateX(0);
+  transition:
+    transform .55s cubic-bezier(.22,.61,.36,1),
+    width .55s cubic-bezier(.22,.61,.36,1),
+    opacity .25s ease;
+  animation:navGlow 2.2s linear infinite;
+  opacity:0;
+}
+@keyframes navGlow{
+  from{background-position:0% 50%}
+  to{background-position:200% 50%}
+}
+
+</style>
+
+<style id="cert-preview-fix">
+.cert-card img{
+  display:block;
+  width:100%;
+  height:240px;
+  object-fit:contain;
+  object-position:center;
+  background:#fff;
+  border-radius:12px;
+}
+</style>
+</head>
+<body>
+<nav><div class="nav">
+<a class="logo" href="#home">Siva Kumar<b>.</b></a>
+<div class="links"><span class="nav-active-line" aria-hidden="true"></span><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#certificates">Certificates</a><a href="#contact">Contact</a></div>
+<a class="resume" href="assets/Siva_Kumar_Resume.pdf" target="_blank">Resume ↗</a>
+</div></nav>
+
+<main>
+<section class="hero" id="home"><div class="wrap">
+<span class="eyebrow"><i class="pulse"></i> Open to software & AI/ML opportunities</span>
+<h1>Code. Solve.<br><span class="grad">Build useful things.</span></h1>
+<p class="hero-copy">I'm <b>Derangula Siva Kumar</b>, a Computer Science student at Parul University specializing in AI. I enjoy problem solving, algorithms and turning ideas into practical software.</p>
+<div class="actions"><a class="btn primary" href="#projects">Explore projects ↓</a><a class="btn" href="https://github.com/sivakumar9867" target="_blank">GitHub ↗</a><a class="btn" href="https://leetcode.com/u/sivakumar986/" target="_blank" rel="noopener">LeetCode ↗</a><a class="btn" href="https://linkedin.com/in/sivakumar986" target="_blank">LinkedIn ↗</a></div>
+<div class="mini"><div><strong>100+</strong><span>coding problems</span></div><div><strong>3</strong><span>internship experiences</span></div><div><strong>2027</strong><span>expected graduation</span></div></div>
+</div></section>
+
+<section id="about" class="section-reveal"><div class="wrap">
+<div class="head"><div><div class="kicker">01 / About</div><h2>Learning by building · AWS.</h2></div><p>A placement-focused developer profile built around programming fundamentals, DSA, software development and AI/ML.</p></div>
+<div class="about"><div class="card large"><p>I am pursuing a B.Tech in Computer Science & Engineering with an AI specialization at Parul University. My current technical focus includes <b>C++, C, Python, SQL, data structures, algorithms and OOP</b>, supported by hands-on work with Flask, Scikit-learn, Git and GitHub.</p><p class="quote">My goal is simple: become stronger at problem solving and build software that actually works.</p></div>
+<div class="facts"><div class="fact"><b>Education</b><span>B.Tech CSE — AI specialization</span></div><div class="fact"><b>University</b><span>Parul University · 2023–2027</span></div><div class="fact"><b>Current direction</b><span>Software development · Algorithms · AI/ML</span></div></div></div>
+</div></section>
+
+<section id="experience" class="section-reveal"><div class="wrap">
+<div class="head"><div><div class="kicker">02 / PROFESSIONAL EXPERIENCE</div><h2>Where I've learned.</h2></div></div>
+<div class="timeline">
+<div class="entry"><i class="dot"></i><div class="date">Jun 2025 — Jul 2025 · Remote</div><h3>Machine Learning Intern · IBM SkillsBuild & Edunet Foundation</h3><p class="muted">Built an employee salary prediction model using Python and Scikit-learn. Worked with preprocessing, feature engineering, Random Forest, hyperparameter tuning and model evaluation.</p><div class="tags"><span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Random Forest</span><span class="tag">ML</span></div></div>
+<div class="entry"><i class="dot"></i><div class="date">May 2025 — Jun 2025 · Remote</div><h3>Python Intern · APSSDC</h3><p class="muted">Developed a Marks Calculator web application using Python, Flask and HTML, including application logic, testing and debugging.</p><div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">HTML</span></div></div>
+<div class="entry"><i class="dot"></i><div class="date">Aug 2024 · Remote</div><h3>Generative AI Intern · Prodigy InfoTech</h3><p class="muted">Explored Generative AI concepts and applications, AI tools and workflows, and foundational techniques during a one-month internship.</p><div class="tags"><span class="tag">Generative AI</span><span class="tag">AI tools</span></div></div>
+</div></div></section>
+
+<section id="projects" class="section-reveal"><div class="wrap">
+<div class="head"><div><div class="kicker">03 / Projects</div><h2>Selected work.</h2></div><p>Hands-on projects across machine learning, recommendation systems and Python web development.</p></div>
+<div class="grid two">
+
+<article class="card project"><span class="project-no">01</span><div>
+<div class="label">Python · Machine Learning</div>
+<h3>Employee Salary Prediction</h3>
+<p>Built an income classification model using the Adult Census Income dataset to predict whether annual income is above or below $50K.</p>
+<p><strong>Highlights:</strong> cleaned unknown categorical values, encoded categorical features, applied Min-Max scaling, used stratified train-test splitting, and compared KNN, Logistic Regression and MLP models. The MLP achieved 85.18% accuracy among the tested models.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span><span class="tag">MLP</span><span class="tag">KNN</span></div>
+</div><div class="project-bottom"><span class="muted">Machine Learning</span><a class="btn" href="https://github.com/sivakumar9867/Employee-Salary-Prediction" target="_blank">View Project ↗</a></div></article>
+
+<article class="card project"><span class="project-no">02</span><div>
+<div class="label">Python · Machine Learning</div>
+<h3>Movie Recommendation System</h3>
+<p>Developed a movie recommendation project using data preprocessing and feature engineering to generate recommendations based on movie characteristics and user preferences.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">Machine Learning</span><span class="tag">Recommendation</span><span class="tag">Feature Engineering</span></div>
+</div><div class="project-bottom"><span class="muted">Recommendation System</span><a class="btn" href="https://github.com/sivakumar9867/movie-recommendation-system" target="_blank">View Project ↗</a></div></article>
+
+<article class="card project"><span class="project-no">03</span><div>
+<div class="label">Python · Flask · HTML</div>
+<h3>Marks Calculator</h3>
+<p>Built a simple web application for calculating student marks using Python and HTML, with Flask-based application logic.</p>
+<p><strong>Highlights:</strong> connected the web interface with Python logic and focused on input handling, calculation and a straightforward user experience.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">HTML</span><span class="tag">Web App</span></div>
+</div><div class="project-bottom"><span class="muted">Web Application</span><a class="btn" href="https://github.com/sivakumar9867/marks-calculator" target="_blank">View Project ↗</a></div></article>
+
+<article class="card project"><span class="project-no">04</span><div>
+<div class="label">AI/ML · Team Project</div>
+<h3>AI-Based Agri-Flow Intelligence</h3>
+<p>Developed a cost and profitability analysis module covering production costs, revenue, Net Farm Income, Benefit-Cost Ratio and sensitivity analysis.</p>
+<div class="tags"><span class="tag">Cost Analysis</span><span class="tag">Profitability</span><span class="tag">Sensitivity Analysis</span></div>
+</div><div class="project-bottom"><span class="muted">Team Project</span><span class="muted">Not available now</span></div></article>
+
+</div></div></section>
+
+<section id="skills" class="section-reveal"><div class="wrap">
+<div class="head"><div><div class="kicker">04 / Skills</div><h2>My toolkit.</h2></div></div>
+<div class="grid two">
+<div class="card"><div class="label">Programming</div><h3>Languages & DSA</h3><div class="skills"><span class="skill">C++</span><span class="skill">C</span><span class="skill">Python</span><span class="skill">SQL</span><span class="skill">Data Structures</span><span class="skill">Algorithms</span><span class="skill">Problem Solving</span><span class="skill">Searching</span><span class="skill">Sorting</span><span class="skill">OOP</span></div></div>
+<div class="card"><div class="label">Tools</div><h3>Tools & Technologies</h3><div class="skills"><span class="skill">Flask</span><span class="skill">HTML</span><span class="skill">Machine Learning</span><span class="skill">Scikit-learn</span><span class="skill">Data Preprocessing</span><span class="skill">Feature Engineering</span><span class="skill">Git</span><span class="skill">GitHub</span><span class="skill">VS Code</span><span class="skill">Debugging</span><span class="skill">Testing</span><span class="skill">Code Optimization</span></div></div>
+<div class="card aws-toolkit-card"><div class="label">AWS</div><h3>AWS Services</h3><div class="skills">
+<span class="skill">AWS</span><span class="skill">EC2</span><span class="skill">S3</span><span class="skill">IAM</span>
+<span class="skill">VPC</span><span class="skill">Lambda</span><span class="skill">RDS</span><span class="skill">CloudWatch</span><span class="skill">EFS</span>
+</div></div></div>
+</div></div></section>
+
+
+
+<section id="aws"><div class="wrap">
+  <div class="head">
+    <div>
+      <div class="kicker">06 / AWS Hands-on Experience</div>
+      <h2>AWS Hands-on Projects.</h2>
+    </div>
+    <p>Build, configure, and document AWS solutions through hands-on tasks — with proof for every step.</p>
+  </div>
+
+  <div class="aws-groups">
+    <article class="card aws-group">
+      <div class="aws-group-top">
+        <span class="project-no">01</span>
+        <span class="aws-count">4 tasks</span>
+      </div>
+      <div class="label">Networking & Security</div>
+      <h3>Networking & Security</h3>
+      <p>Hands-on practice with VPC networking, private subnets, traffic controls and private DNS.</p>
+      <button class="btn aws-open" type="button" data-group="networking">View tasks ↗</button>
+    </article>
+
+    <article class="card aws-group">
+      <div class="aws-group-top">
+        <span class="project-no">02</span>
+        <span class="aws-count">7 tasks</span>
+      </div>
+      <div class="label">Compute, Storage & Infrastructure</div>
+      <h3>Compute, Storage & Infrastructure</h3>
+      <p>Practical work with EC2, load balancing, Auto Scaling, storage, web hosting and EFS.</p>
+      <button class="btn aws-open" type="button" data-group="compute">View tasks ↗</button>
+    </article>
+
+    <article class="card aws-group">
+      <div class="aws-group-top">
+        <span class="project-no">03</span>
+        <span class="aws-count">6 tasks</span>
+      </div>
+      <div class="label">Identity, Databases & Monitoring</div>
+      <h3>Identity, Databases & Monitoring</h3>
+      <p>Hands-on practice with IAM, serverless compute, databases and CloudWatch monitoring.</p>
+      <button class="btn aws-open" type="button" data-group="data">View tasks ↗</button>
+    </article>
+  </div>
+
+  <div class="aws-flow">
+    <span>1. Choose an AWS area</span><span>→</span><span>2. Choose a task</span><span>→</span><span>3. View evidence</span>
+  </div>
+</div></section>
+
+<div class="aws-modal" id="awsModal" aria-hidden="true">
+  <div class="aws-backdrop" data-close-aws></div>
+  <div class="aws-panel" role="dialog" aria-modal="true" aria-labelledby="awsModalTitle">
+    <button class="aws-close" type="button" data-close-aws aria-label="Close">×</button>
+    <div class="kicker">AWS Hands-on Tasks</div>
+    <h2 id="awsModalTitle">Tasks</h2>
+    <p class="aws-modal-intro">Select a task to open its details.</p>
+    <div class="aws-task-list" id="awsTaskList"></div>
+  </div>
+</div>
+
+<div class="aws-proof-modal" id="awsProofModal" aria-hidden="true">
+  <div class="aws-backdrop" data-close-proof></div>
+  <div class="aws-proof-panel" role="dialog" aria-modal="true" aria-labelledby="awsProofTitle">
+    <button class="aws-close" type="button" data-close-proof aria-label="Close">×</button>
+    <div class="kicker">AWS Task Proof</div>
+    <h2 id="awsProofTitle">Proof</h2>
+    <p id="awsProofDescription"></p>
+    <div class="aws-proof-content" id="awsProofContent"></div>
+  </div>
+</div>
+
+<section id="certificates" class="section-reveal"><div class="wrap">
+<div class="head"><div><div class="kicker">05 / Certifications</div><h2>Credentials.</h2></div><p>A selection of certifications, internships, and learning milestones.</p></div>
+
+<div class="grid three featured-certs">
+<div class="card cert featured-cert"><img src="./assets/previews/edunet-ai-ml.png" alt="Edunet Foundation Artificial Intelligence and Machine Learning certificate"><div class="label">2025 · 6 weeks</div><h3>Artificial Intelligence & Machine Learning</h3><p>Edunet Foundation in collaboration with AICTE, implemented through IBM SkillsBuild.</p><a class="btn" href="assets/certificates/edunet-ai-ml.pdf" target="_blank">Open certificate ↗</a></div>
+<div class="card cert featured-cert"><img src="./assets/previews/apssdc-python.png" alt="APSSDC Python Programming certificate"><div class="label">2025 · Summer Internship</div><h3>Python Programming</h3><p>Andhra Pradesh State Skill Development Corporation — Summer Online Internship Program 2025.</p><a class="btn" href="assets/certificates/apssdc-python.pdf" target="_blank">Open certificate ↗</a></div>
+<div class="card cert featured-cert"><img src="./assets/previews/prodigy-genai.jpg" alt="Prodigy InfoTech Generative AI certificate"><div class="label">2024 · 1 month</div><h3>Generative AI</h3><p>Prodigy InfoTech — internship completed from 1 August to 31 August 2024.</p><a class="btn" href="assets/certificates/prodigy-genai.pdf" target="_blank">Open certificate ↗</a></div>
+</div>
+
+<div class="minor-head"><div><div class="kicker">Additional Certifications</div><p>Additional certifications and learning milestones.</p></div></div>
+
+<div class="minor-certs">
+<div class="minor-cert">
+  <a class="minor-thumb" href="assets/certificates/aws-ml-ai-fundamentals.pdf" target="_blank" aria-label="Open AWS Fundamentals of Machine Learning and Artificial Intelligence certificate">
+    <img src="./assets/previews/aws-ml-ai-fundamentals.jpg" alt="AWS Fundamentals of Machine Learning and Artificial Intelligence certificate">
+  </a>
+  <div class="minor-info">
+    <div class="minor-meta">2025 · AWS Training and Certification</div>
+    <h3>Fundamentals of Machine Learning and Artificial Intelligence</h3>
+    <a class="minor-link" href="assets/certificates/aws-ml-ai-fundamentals.pdf" target="_blank">View certificate ↗</a>
+  </div>
+</div>
+
+<div class="minor-cert">
+  <a class="minor-thumb" href="assets/certificates/linkedin-generative-ai.jpg" target="_blank" aria-label="Open What Is Generative AI? certificate">
+    <img src="./assets/previews/linkedin-generative-ai.jpg" alt="What Is Generative AI? certificate">
+  </a>
+  <div class="minor-info">
+    <div class="minor-meta">2024 · LinkedIn Learning</div>
+    <h3>What Is Generative AI?</h3>
+    <a class="minor-link" href="assets/certificates/linkedin-generative-ai.jpg" target="_blank">View certificate ↗</a>
+  </div>
+</div>
+
+<div class="minor-cert">
+  <a class="minor-thumb" href="assets/certificates/bharat-intern-ml.jpg" target="_blank" aria-label="Open Machine Learning Internship certificate">
+    <img src="./assets/previews/bharat-intern-ml.jpg" alt="Machine Learning Internship certificate">
+  </a>
+  <div class="minor-info">
+    <div class="minor-meta">2024 · Bharat Intern</div>
+    <h3>Machine Learning Internship</h3>
+    <a class="minor-link" href="assets/certificates/bharat-intern-ml.jpg" target="_blank">View certificate ↗</a>
+  </div>
+</div>
+
+<div class="minor-cert">
+  <a class="minor-thumb" href="assets/certificates/great-learning-deep-learning.jpg" target="_blank" aria-label="Open Introduction to Deep Learning certificate">
+    <img src="./assets/previews/great-learning-deep-learning.jpg" alt="Introduction to Deep Learning certificate">
+  </a>
+  <div class="minor-info">
+    <div class="minor-meta">2024 · Great Learning Academy</div>
+    <h3>Introduction to Deep Learning</h3>
+    <a class="minor-link" href="assets/certificates/great-learning-deep-learning.jpg" target="_blank">View certificate ↗</a>
+  </div>
+</div>
+
+<div class="minor-cert">
+  <a class="minor-thumb" href="assets/certificates/simplilearn-c-programming.png" target="_blank" aria-label="Open C Programming Basics certificate">
+    <img src="./assets/previews/simplilearn-c-programming.png" alt="C Programming Basics certificate">
+  </a>
+  <div class="minor-info">
+    <div class="minor-meta">2024 · Simplilearn SkillUp</div>
+    <h3>C Programming Basics</h3>
+    <a class="minor-link" href="assets/certificates/simplilearn-c-programming.png" target="_blank">View certificate ↗</a>
+  </div>
+</div>
+
+
+<div class="minor-cert">
+  <a class="minor-thumb" href="assets/certificates/ibm-ai-fundamentals.pdf" target="_blank" aria-label="Open Artificial Intelligence Fundamentals certificate">
+    <img src="./assets/previews/ibm-ai-fundamentals.jpg" alt="Artificial Intelligence Fundamentals certificate">
+  </a>
+  <div class="minor-info">
+    <div class="minor-meta">2025 · IBM SkillsBuild</div>
+    <h3>Artificial Intelligence Fundamentals</h3>
+    <a class="minor-link" href="assets/certificates/ibm-ai-fundamentals.pdf" target="_blank">View certificate ↗</a>
+  </div>
+</div>
+
+<div class="minor-cert">
+  <a class="minor-thumb" href="assets/certificates/aws-solutions-architecture.pdf" target="_blank" aria-label="Open Solutions Architecture Job Simulation certificate">
+    <img src="./assets/previews/aws-solutions-architecture.jpg" alt="Solutions Architecture Job Simulation certificate">
+  </a>
+  <div class="minor-info">
+    <div class="minor-meta">2025 · AWS · Forage</div>
+    <h3>Solutions Architecture Job Simulation</h3>
+    <a class="minor-link" href="assets/certificates/aws-solutions-architecture.pdf" target="_blank">View certificate ↗</a>
+  </div>
+</div>
+
+<div class="minor-cert">
+  <a class="minor-thumb" href="assets/certificates/azure-functions.jpg" target="_blank" aria-label="Open Azure Functions certificate">
+    <img src="./assets/previews/azure-functions.jpg" alt="Azure Functions certificate">
+  </a>
+  <div class="minor-info">
+    <div class="minor-meta">2024 · Infosys Springboard</div>
+    <h3>Azure Functions</h3>
+    <a class="minor-link" href="assets/certificates/azure-functions.jpg" target="_blank">View certificate ↗</a>
+  </div>
+</div>
+
+<div class="minor-cert">
+  <a class="minor-thumb" href="assets/certificates/infosys-ai.jpg" target="_blank" aria-label="Open Introduction to Artificial Intelligence certificate">
+    <img src="./assets/previews/infosys-ai.jpg" alt="Introduction to Artificial Intelligence certificate">
+  </a>
+  <div class="minor-info">
+    <div class="minor-meta">2024 · Infosys Springboard</div>
+    <h3>Introduction to Artificial Intelligence</h3>
+    <a class="minor-link" href="assets/certificates/infosys-ai.jpg" target="_blank">View certificate ↗</a>
+  </div>
+</div>
+
+<div class="minor-cert">
+  <a class="minor-thumb" href="assets/certificates/cpp-programming.jpg" target="_blank" aria-label="Open C++ Programming certificate">
+    <img src="./assets/previews/cpp-programming.jpg" alt="C++ Programming certificate">
+  </a>
+  <div class="minor-info">
+    <div class="minor-meta">2024 · DataFlair</div>
+    <h3>C++ Programming</h3>
+    <a class="minor-link" href="assets/certificates/cpp-programming.jpg" target="_blank">View certificate ↗</a>
+  </div>
+</div>
+
+<div class="minor-cert">
+  <a class="minor-thumb" href="assets/certificates/c-programming.jpg" target="_blank" aria-label="Open C Programming certificate">
+    <img src="./assets/previews/c-programming.jpg" alt="C Programming certificate">
+  </a>
+  <div class="minor-info">
+    <div class="minor-meta">2024 · DataFlair</div>
+    <h3>C Programming</h3>
+    <a class="minor-link" href="assets/certificates/c-programming.jpg" target="_blank">View certificate ↗</a>
+  </div>
+</div>
+
+<div class="minor-cert">
+  <a class="minor-thumb" href="assets/certificates/tcs-ion-career-edge.pdf" target="_blank" aria-label="Open TCS iON Career Edge – Young Professional certificate">
+    <img src="./assets/previews/tcs-ion-career-edge.jpg" alt="TCS iON Career Edge – Young Professional certificate">
+  </a>
+  <div class="minor-info">
+    <div class="minor-meta">2025 · TCS iON</div>
+    <h3>TCS iON Career Edge – Young Professional</h3>
+    <a class="minor-link" href="assets/certificates/tcs-ion-career-edge.pdf" target="_blank">View certificate ↗</a>
+  </div>
+</div>
+
+<div class="minor-cert">
+  <a class="minor-thumb" href="assets/certificates/chatgpt-for-everyone.jpg" target="_blank" aria-label="Open ChatGPT for Everyone certificate">
+    <img src="./assets/previews/chatgpt-for-everyone.jpg" alt="ChatGPT for Everyone certificate">
+  </a>
+  <div class="minor-info">
+    <div class="minor-meta">2025 · GUVI · HCL</div>
+    <h3>ChatGPT for Everyone</h3>
+    <a class="minor-link" href="assets/certificates/chatgpt-for-everyone.jpg" target="_blank">View certificate ↗</a>
+  </div>
+</div>
+
+<div class="minor-cert">
+  <a class="minor-thumb" href="assets/certificates/microsoft-ai-skills-fest.jpg" target="_blank" aria-label="Open Microsoft AI Skills Fest certificate">
+    <img src="./assets/previews/microsoft-ai-skills-fest.jpg" alt="Microsoft AI Skills Fest certificate">
+  </a>
+  <div class="minor-info">
+    <div class="minor-meta">2025 · Microsoft · Festival Participation</div>
+    <h3>Microsoft AI Skills Fest</h3>
+    <a class="minor-link" href="assets/certificates/microsoft-ai-skills-fest.jpg" target="_blank">View certificate ↗</a>
+  </div>
+</div>
+
+<div class="minor-cert">
+  <a class="minor-thumb" href="assets/certificates/aws-cloud-club.pdf" target="_blank" aria-label="Open Cloud Climber – AWS Certification Edition certificate">
+    <img src="./assets/previews/aws-cloud-club.jpg" alt="Cloud Climber – AWS Certification Edition certificate">
+  </a>
+  <div class="minor-info">
+    <div class="minor-meta">2025 · AWS Cloud Club · Parul University</div>
+    <h3>Cloud Climber – AWS Certification Edition</h3>
+    <a class="minor-link" href="assets/certificates/aws-cloud-club.pdf" target="_blank">View certificate ↗</a>
+  </div>
+</div>
+
+</div>
+</div></section>
+
+<section id="contact" class="section-reveal"><div class="wrap">
+<div class="contact"><div class="card contact-main"><div class="kicker">06 / Contact</div><h2>Let's build something useful.</h2><p class="muted">For opportunities, collaborations or project discussions, reach out through email or LinkedIn.</p><div class="actions"><a class="btn primary" href="mailto:sivakumar986@outlook.com">Email me ↗</a><a class="btn" href="assets/Siva_Kumar_Resume.pdf" target="_blank">View resume ↗</a></div></div>
+<div class="card"><div class="label">Connect</div><div class="contact-links"><a href="mailto:sivakumar986@outlook.com">✉ sivakumar986@outlook.com</a><a href="tel:+919966157781">☎ +91 9966157781</a><a href="https://linkedin.com/in/sivakumar986" target="_blank">in LinkedIn ↗</a><a href="https://github.com/sivakumar9867" target="_blank">⌘ GitHub ↗</a></div></div></div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><div>© 2026 Siva Kumar</div><div>Computer Science · AI · Software Development</div></div></footer>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.1});
+document.querySelectorAll('.card,.entry,.head').forEach(e=>{e.classList.add('reveal');io.observe(e)});
+</script>
+
+<script>
+(function(){
+  const taskGroups = {"networking":{"title":"Networking & Security","tasks":[{"title":"VPC & Private Subnet","category":"VPC / Networking","proof":"assets/aws-proofs/task-1.pdf","details":["Created a Virtual Private Cloud (VPC) named site1-vpc in the Ohio region (us-east-2) with the CIDR block 172.168.0.0/16.","Set up a private subnet in us-east-2a with CIDR 172.168.1.0/24."],"outcomes":["All configurations passed 100% of the validation checks.","Learned about VPC networking and subnet design in the cloud.","This is the beginning of the cloud journey, with continued focus on building AWS skills."]},{"title":"Security Groups","category":"VPC / Security","proof":"assets/aws-proofs/task-2.pdf","details":["Created a Security Group named Practice in the Ohio region (us-east-2).","Configured inbound rules to allow SSH traffic on port 22 and SMTPS traffic on port 465.","Configured an outbound rule to allow WinRM-HTTPS traffic on port 5986."],"outcomes":["All test cases passed successfully with 100% validation.","Learned how to control and secure traffic to and from AWS resources using Security Groups.","Strengthened understanding of cloud security best practices and network access management."]},{"title":"Network ACLs","category":"VPC / Security","proof":"assets/aws-proofs/task-3.pdf","details":["Created a Network ACL named Usernetwork in the Europe (Ireland) region (eu-west-1).","Inbound rules: allowed MySQL/Aurora traffic on port 3306 and denied RDP traffic on port 3389.","Outbound rules: allowed Oracle traffic on port 1521 and denied WinRM-HTTP traffic on port 5985."],"outcomes":["All test cases passed successfully with 100% validation.","Enhanced understanding of controlling inbound and outbound traffic at the subnet level using Network ACLs.","Strengthened cloud security and network management skills."]},{"title":"Route 53 Private DNS","category":"Route 53 / Networking","proof":"assets/aws-proofs/task-4.pdf","details":["Created a Private Hosted Zone named dev-test.com.","Ensured the hosted zone is private and accessible only within the specified VPCs.","Created a DNS A Record named testing.dev-test.com."],"outcomes":["All test cases passed with 100% success.","Deepened understanding of internal domain resolution and DNS management in a cloud environment using AWS Route 53.","Built a foundation for more advanced configurations and certifications."]}]},"compute":{"title":"Compute, Storage & Infrastructure","tasks":[{"title":"EC2 & Application Load Balancer","category":"EC2 / Elastic Load Balancing","proof":"assets/aws-proofs/task-5.pdf","details":["Launched two EC2 instances — serverinstance1 in us-west-2a and serverinstance2 in us-west-2b.","Configured a Security Group to allow HTTP traffic on port 80 for both instances.","Created a Target Group named servertargets and registered both EC2 instances.","Set up an Application Load Balancer named serverelb listening on HTTP port 80 and linked it to the servertargets group."],"outcomes":["All test cases passed with 100% success.","Improved understanding of designing fault-tolerant and highly available architectures in AWS using Application Load Balancers.","Built experience applicable to real-world cloud deployments."]},{"title":"Launch Template & Auto Scaling Group","category":"EC2 / Auto Scaling","proof":"assets/aws-proofs/task-6.pdf","details":["Created a Launch Template named sample1.","Configured the template with Amazon Linux 2023, instance type t2.micro or t3.micro, key pair sample1, and a 15 GB root volume.","Created an Auto Scaling Group named samplegroup.","Configured Availability Zones us-west-2a and us-west-2b.","Set maximum capacity to 4 instances, minimum capacity to 2 instances, and desired capacity to 2 instances."],"outcomes":["All test cases passed with 100% success.","Enhanced understanding of automated scaling, load distribution, and infrastructure resilience in AWS."]},{"title":"S3 Versioning, Tags & File Upload","category":"S3 / Storage","proof":"assets/aws-proofs/task-8.pdf","details":["Created an S3 bucket named coder<account-id> in the us-east-2 (Ohio) region.","Enabled Bucket Versioning for enhanced data durability.","Added a tag: Key = UsedFor, Value = FileUpload.","Uploaded a file named config.json to the root of the bucket.","Created a folder named assets/ within the bucket.","Ensured public read access for the config.json file."],"outcomes":["All test cases passed with 100% success.","Strengthened understanding of S3 versioning, tagging, and secure file accessibility in the cloud.","Continued building hands-on AWS storage expertise."]},{"title":"EBS gp2 Volume","category":"EBS / Block Storage","proof":"assets/aws-proofs/task-9.pdf","details":["Created a new SSD (gp2) EBS volume.","Configured the volume size to 8 GiB.","Set the volume type explicitly as gp2.","Disabled KMS encryption to ensure the volume is not encrypted.","Added a tag with Key = ebs and Value = encryption_disabled."],"outcomes":["All test cases passed with 100% success.","Enhanced understanding of block storage, volume encryption, and tagging strategies in AWS.","Built practical exposure to AWS storage configuration."]},{"title":"S3 Static Website — index.html","category":"S3 / Static Website","proof":"assets/aws-proofs/task-10.pdf","details":["Created an S3 bucket named coder in the us-west-2 region.","Added a tag: Key = UsedFor, Value = StaticWebsite.","Uploaded index.html to the root and created a folder named image/, then uploaded image1.jpg.","Enabled public read access for the index.html file."],"outcomes":["All test cases passed.","Enhanced skills in S3 static website hosting and AWS storage services."]},{"title":"S3 Static Website — home.html","category":"S3 / Static Website","proof":"assets/aws-proofs/task-13.pdf","details":["Created an S3 bucket named coder<Your AWS Account ID> in the us-west-2 region.","Enabled bucket versioning.","Uploaded home.html to the root directory.","Created an assets/ folder and uploaded banner.jpg.","Enabled public read access for the website files.","Activated Static Website Hosting and set the index document to home.html."],"outcomes":["Learned how to deploy and manage a static website using AWS S3.","Gained hands-on experience in bucket versioning, access control, and hosting setup.","Understood how S3 can serve as a cost-effective web hosting solution."]},{"title":"EFS Lifecycle & CloudWatch Alarm","category":"EFS / Monitoring","proof":"assets/aws-proofs/task-14.pdf","details":["Confirmed the creation of the EFS named dev-efs.","Verified that the lifecycle policy transitions files to Infrequent Access (IA) storage after 30 days.","Checked that a CloudWatch alarm named efs-alarm was created.","Ensured the alarm had a tag with key = efs and value = alarm."],"outcomes":["Gained hands-on experience in EFS lifecycle management and optimisation.","Learned how to monitor storage health using CloudWatch alarms.","Strengthened skills in automated monitoring and resource tagging in AWS."]}]},"data":{"title":"Identity, Databases & Monitoring","tasks":[{"title":"Lambda Function, Version & Alias","category":"Lambda / Serverless","proof":"assets/aws-proofs/task-7.pdf","details":["Created a Lambda function named practice_lambda in the us-east-2 region.","Set the runtime to Python 3.9.","Configured memory size to 128 MB and timeout to 60 seconds.","Published the function's latest version.","Created an alias named user_alias pointing to the latest version.","Applied a Lambda function tag with key and value as String."],"outcomes":["All test cases passed with 100% success.","Enhanced skills in serverless architecture, function versioning, and alias management using AWS Lambda."]},{"title":"IAM Group & User","category":"IAM / Security","proof":"assets/aws-proofs/task-11.pdf","details":["Created an IAM Group named Network-L1-Team.","Attached the policies AmazonVPCReadOnlyAccess and AWSNetworkManagerReadOnlyAccess.","Created an IAM User named Network-L1-User1.","Added the user to the Network-L1-Team group."],"outcomes":["All test cases passed with 100% success.","Gained practical experience in secure group management, policy attachment, and user-role assignments.","Practised secure access management in AWS."]},{"title":"RDS MySQL Instance","category":"RDS / Database","proof":"assets/aws-proofs/task-12.pdf","details":["Created a DB instance with the identifier mysqlinstance1.","Selected the MySQL engine.","Configured the instance type as db.t3.micro.","Allocated 34 GB of storage.","Launched the RDS instance with the appropriate settings."],"outcomes":["Learned how to set up a fully managed relational database in AWS.","Gained an understanding of scaling options, storage allocation, and instance configuration.","Acquired practical experience in RDS deployment and management.","Strengthened skills for real-world cloud database administration."]},{"title":"DynamoDB Table & Streams","category":"DynamoDB / NoSQL","proof":"assets/aws-proofs/task-15.pdf","details":["Navigated to the DynamoDB service in AWS Management Console.","Created a table named book.","Set Partition Key as author and Sort Key as bookName.","Enabled Streams with the New image option.","Deployed the table in the us-east-2 (Ohio) region."],"outcomes":["Learned how to create and configure DynamoDB tables for structured data storage.","Understood stream-enabled tables for real-time change tracking.","Strengthened NoSQL database management and AWS DynamoDB configuration skills."]},{"title":"CloudWatch EC2 CPU Alarm","category":"CloudWatch / Monitoring","proof":"assets/aws-proofs/task-16.pdf","details":["Accessed AWS CloudWatch in the us-west-2 (Oregon) region.","Selected the EC2 metric CPUUtilization for real-time monitoring.","Set a Static threshold for CPU ≥ 80%.","Defined a 5-minute period for accurate performance tracking.","Named the alarm EC2CPUUtilizationMonitor and validated its active status."],"outcomes":["Gained hands-on experience in creating and managing CloudWatch alarms.","Understood how to monitor EC2 health metrics effectively.","Learned proactive alerting techniques for maintaining system performance."]},{"title":"IAM User & Read-Only Access","category":"IAM / Security","proof":"assets/aws-proofs/task-17.pdf","details":["Created a new IAM user named ActingUser.","Assigned a tag with Key = Dynamo and Value = vpc.","Attached the AmazonDynamoDBReadOnlyAccess policy for database monitoring.","Attached the AmazonVPCReadOnlyAccess policy for network visibility.","Verified user permissions to ensure adherence to the least-privilege principle."],"outcomes":["Gained an understanding of the IAM user creation and policy attachment process.","Practised the principle of least privilege to secure access.","Acquired practical experience in AWS Identity and Access Management."]}]}};
+
+  const modal = document.getElementById("awsModal");
+  const proofModal = document.getElementById("awsProofModal");
+  const list = document.getElementById("awsTaskList");
+  const title = document.getElementById("awsModalTitle");
+  const proofTitle = document.getElementById("awsProofTitle");
+  const proofDescription = document.getElementById("awsProofDescription");
+  const proofContent = document.getElementById("awsProofContent");
+
+  function close(el){ if(el){ el.classList.remove("is-open"); el.setAttribute("aria-hidden","true"); } }
+  function open(el){ if(el){ el.classList.add("is-open"); el.setAttribute("aria-hidden","false"); } }
+
+  document.querySelectorAll(".aws-open").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      const group = taskGroups[btn.dataset.group];
+      title.textContent = group.title;
+      list.innerHTML = group.tasks.map((task,i)=>`
+        <div class="aws-task">
+          <div>
+            <div class="aws-task-title">${i+1}. ${task.title}</div>
+            <div class="aws-task-type">${task.category}</div>
+          </div>
+          <button class="btn aws-proof-btn" type="button" data-task="${encodeURIComponent(task.title)}">View Project →</button>
+        </div>
+      `).join("");
+      open(modal);
+    });
+  });
+
+  list.addEventListener("click",e=>{
+    const btn = e.target.closest(".aws-proof-btn");
+    if(!btn) return;
+    const taskName = decodeURIComponent(btn.dataset.task);
+    let found = null;
+    Object.values(taskGroups).some(group => {
+      const match = group.tasks.find(t => t.title === taskName);
+      if(match){ found = match; return true; }
+      return false;
+    });
+    if(!found) return;
+    proofTitle.textContent = found.title;
+    proofDescription.textContent = found.category;
+    const details = found.details.map(x => `<li>${x}</li>`).join("");
+    const outcomes = found.outcomes.map(x => `<li>${x}</li>`).join("");
+    const taskMatch = found.proof.match(/task-(\d+)\.pdf/);
+    const taskNo = taskMatch ? taskMatch[1] : "";proofContent.innerHTML = `
+      <div class="aws-proof-card">
+        <h3>What I did</h3>
+        <ul>${details}</ul>
+      </div>
+      <div class="aws-proof-card">
+        <h3>Outcome & learning</h3>
+        <ul>${outcomes}</ul>
+      </div>
+      <div class="aws-proof-card">
+        <h3>Project Preview</h3>
+        <div class="aws-proof-preview">
+          <img src="assets/aws-previews/task-${taskNo}.jpg" alt="${found.title} evidence preview" loading="lazy">
+                  </div>
+        <div class="aws-proof-actions">
+          <a class="btn" href="${found.proof}" target="_blank" rel="noopener">View Project PDF ↗</a>
+        </div>
+      </div>`;
+    open(proofModal);
+  });
+
+  document.querySelectorAll("[data-close-aws]").forEach(el=>el.addEventListener("click",()=>close(modal)));
+  document.querySelectorAll("[data-close-proof]").forEach(el=>el.addEventListener("click",()=>close(proofModal)));
+
+  document.addEventListener("keydown",e=>{
+    if(e.key==="Escape"){ close(proofModal); close(modal); }
+  });
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<script id="section-scroll-animation">
+(() => {
+  const nav = document.querySelector("nav .links");
+  const links = [...document.querySelectorAll("nav .links a")];
+  const sections = [...document.querySelectorAll("main section[id]")].filter(s => s.id !== "home");
+  const line = document.querySelector("nav .nav-active-line");
+  if (!nav || !line || !links.length || !sections.length) return;
+
+  const items = sections.map(section => ({
+    section,
+    link: links.find(a => a.getAttribute("href") === "#" + section.id)
+  })).filter(item => item.link);
+
+  let frame = null;
+
+  function update() {
+    frame = null;
+
+    const navRect = nav.getBoundingClientRect();
+    const trigger = window.innerHeight * 0.42;
+
+    let currentIndex = 0;
+    for (let i = 0; i < items.length; i++) {
+      if (items[i].section.getBoundingClientRect().top <= trigger) {
+        currentIndex = i;
+      }
+    }
+
+    const current = items[currentIndex];
+    const next = items[Math.min(currentIndex + 1, items.length - 1)];
+
+    const currentRect = current.link.getBoundingClientRect();
+    const nextRect = next.link.getBoundingClientRect();
+
+    let progress = 0;
+    if (next !== current) {
+      const currentTop = current.section.getBoundingClientRect().top;
+      const nextTop = next.section.getBoundingClientRect().top;
+      const distance = currentTop - nextTop;
+      if (distance > 0) {
+        progress = Math.max(0, Math.min(1, (trigger - currentTop) / distance));
+      }
+    }
+
+    const left = (currentRect.left - navRect.left) +
+      ((nextRect.left - navRect.left) - (currentRect.left - navRect.left)) * progress;
+
+    const width = currentRect.width +
+      (nextRect.width - currentRect.width) * progress;
+
+    line.style.transform = `translate3d(${left}px,0,0)`;
+    line.style.width = `${width}px`;
+    line.style.opacity = "1";
+
+    links.forEach(link => link.classList.remove("section-active"));
+    current.link.classList.add("section-active");
+  }
+
+  function requestUpdate() {
+    if (frame === null) frame = requestAnimationFrame(update);
+  }
+
+  window.addEventListener("scroll", requestUpdate, {passive:true});
+  window.addEventListener("resize", requestUpdate);
+
+  links.forEach(link => {
+    link.addEventListener("click", () => setTimeout(requestUpdate, 80));
+  });
+
+  requestUpdate();
+})();
+</script>
+
+</body>
+</html>
