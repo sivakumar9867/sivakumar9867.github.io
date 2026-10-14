@@ -51,8 +51,11 @@ main{width:min(94%,1440px);margin:24px auto 48px}.eyebrow{font:500 .7rem "DM Mon
  backButton.href='index.html#'+(sectionMap[back]||'home');
  // Same-tab links make browser Back work naturally. The visible Back button uses history when possible.
  backButton.addEventListener('click',function(e){
-   if(history.length>1 && document.referrer){
-     try{if(new URL(document.referrer).origin===location.origin){e.preventDefault();history.back();}}catch(_){}
+   // Document links open in the same tab. Prefer the browser's real history
+   // so Back returns to the exact page (AWS task/category, certificates, or resume source).
+   if(history.length>1){
+     e.preventDefault();
+     history.back();
    }
  });
  if(!allowed.test(raw)||raw.split('/').includes('..')){
