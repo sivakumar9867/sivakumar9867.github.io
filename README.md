@@ -8,7 +8,7 @@ Personal portfolio for **Derangula Siva Kumar**, a Computer Science & Engineerin
 - About and professional experience
 - Four README-informed projects with individual repository and README links
 - Skills, including AI/ML and AWS & Cloud Computing
-- AWS Labs with three category overview cards and 17 grouped hands-on tasks, each with a preview and its own evidence PDF
+- AWS Labs with a featured AWS VPC Peering project, featured VPC Peering project, three category overview cards and 17 grouped hands-on tasks, each with a preview and its own evidence PDF
 - Internship certificates as separate files with individual previews and links
 - Full additional-certification collection with previews and source documents
 - Academic Honors & Scholarships, including the Yuva Unstoppable Merit Scholarship
@@ -20,6 +20,9 @@ Personal portfolio for **Derangula Siva Kumar**, a Computer Science & Engineerin
 2. [Movie Recommendation System](https://github.com/sivakumar9867/movie-recommendation-system) — content-based recommendations using TF-IDF and cosine similarity, served through Flask.
 3. [Marks Calculator](https://github.com/sivakumar9867/marks-calculator) — Flask application with live total/average previews, validation, per-subject result indicators, and a print-friendly report.
 4. [AI-Based Agri-Flow Intelligence](https://github.com/sivakumar9867/AI-Based-Agri-Flow-Intelligence) — agricultural cost/profitability analysis and sensitivity scenarios, described from available resume information because repository implementation details were not available when reviewed.
+
+## Featured AWS VPC Peering project
+The AWS section features a dedicated VPC Peering project page with the problem statement, internship context, architecture diagram, configuration notes, test outcomes and individually explained screenshot evidence.
 
 ## AWS hands-on tasks
 The AWS landing section shows three category cards. Select a category to open its dedicated page, then use “View Project” to open an individual task page with technical details and an embedded evidence PDF. Back links and browser history return you to the previous level:
@@ -33,6 +36,8 @@ All 17 task cards include preview images, expandable technical steps and learnin
 ```text
 .
 ├── assets/
+│   ├── aws-vpc-peering/    # VPC peering evidence screenshots
+│   ├── aws-vpc-peering-architecture.svg
 │   ├── aws-previews/       # 17 AWS task preview images
 │   ├── aws-proofs/         # 17 individual task evidence PDFs
 │   ├── certificates/       # Individual certificate documents/images
