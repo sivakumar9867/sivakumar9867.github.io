@@ -10,13 +10,27 @@
 :root{--bg:#07101d;--text:#f4f7ff;--muted:#a8b6cd;--line:rgba(186,207,255,.16);--cyan:#35d8ff;--blue:#4e8cff;--violet:#9a72ff;--pink:#f26bd6}
 *{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 5% 10%,rgba(44,153,255,.14),transparent 29%),radial-gradient(ellipse at 92% 16%,rgba(153,88,255,.13),transparent 27%),var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif}
 .top{position:sticky;top:0;z-index:5;background:rgba(7,16,29,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.topin{width:min(94%,1440px);min-height:74px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:800;letter-spacing:-.05em;font-size:1.15rem;background:linear-gradient(90deg,var(--cyan),var(--blue),var(--violet),var(--pink));color:transparent;background-clip:text;-webkit-background-clip:text}.actions{display:flex;gap:9px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;color:var(--text);font-weight:700;font-size:.8rem;text-decoration:none;background:rgba(11,23,40,.7);transition:.2s}.btn:hover{border-color:var(--cyan);background:rgba(53,216,255,.09)}.btn.primary{background:linear-gradient(110deg,var(--cyan),#8a83ff);color:#07101d;border:0}
-main{width:min(94%,1440px);margin:24px auto 48px}.eyebrow{font:500 .7rem "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan)}h1{font-size:clamp(1.5rem,3vw,2.4rem);line-height:1.15;letter-spacing:-.05em;margin:8px 0 18px;overflow-wrap:anywhere}.viewer{height:calc(100vh - 190px);min-height:420px;border:1px solid var(--line);border-radius:15px;overflow:hidden;background:#fff}iframe{width:100%;height:100%;border:0;background:white}.image-view{display:none;width:100%;max-height:calc(100vh - 210px);object-fit:contain;background:#101a29;border:1px solid var(--line);border-radius:15px}.error{padding:24px;border:1px solid var(--line);border-radius:12px;color:#7b8ba4;background:#fff;min-height:80px}
-@media(max-width:600px){.topin{padding:12px 0;align-items:flex-start;flex-direction:column}.actions{width:100%}.btn{font-size:.74rem;padding:9px 11px}.viewer{height:70vh;min-height:360px}}
+main{width:min(94%,1440px);margin:24px auto 48px}.eyebrow{font:500 .7rem "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan)}h1{font-size:clamp(1.5rem,3vw,2.4rem);line-height:1.15;letter-spacing:-.05em;margin:8px 0 18px;overflow-wrap:anywhere}.viewer{height:calc(100vh - 190px);min-height:420px;border:1px solid rgba(255,255,255,.86);box-shadow:0 0 0 1px rgba(255,255,255,.07),0 14px 35px rgba(0,0,0,.12);border-radius:15px;overflow:hidden;background:#fff}iframe{width:100%;height:100%;border:0;background:white}
+.image-viewer{display:none;width:100%;height:100%;background:#fff;color:#172033;flex-direction:column}
+.image-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:nowrap;min-height:54px;padding:7px 14px;border-bottom:1px solid #292929;background:#3b3b3b;color:#f5f5f5;overflow:hidden;font-family:Arial,Manrope,system-ui,sans-serif}
+.image-file{display:flex;align-items:center;gap:15px;flex:1 1 280px;min-width:0;overflow:hidden;font-size:.83rem;font-weight:600;color:#f5f5f5;white-space:nowrap}
+.image-file-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.toolbar-menu{display:inline-flex;align-items:center;justify-content:center;flex:none;width:24px;color:#ededed;font-size:1rem}
+.toolbar-divider{height:30px;width:1px;flex:none;background:rgba(255,255,255,.22)}
+.image-zoom-controls{display:flex;align-items:center;justify-content:center;gap:5px;flex:none}
+.zoom-btn,.zoom-download{display:inline-flex;align-items:center;justify-content:center;min-width:34px;min-height:31px;padding:5px 9px;border:1px solid transparent;border-radius:3px;background:transparent;color:#f4f4f4;font:500 .78rem Arial,Manrope,system-ui,sans-serif;text-decoration:none;cursor:pointer}
+.zoom-btn:hover,.zoom-download:hover{border-color:rgba(255,255,255,.12);background:rgba(255,255,255,.1)}.zoom-level{min-width:50px;text-align:center;padding:5px 7px;background:#252525;color:#fff;font:500 .74rem Arial,Manrope,system-ui,sans-serif}.zoom-btn:focus-visible,.zoom-download:focus-visible{outline:2px solid #8fcfff;outline-offset:2px}
+.image-toolbar-actions{display:flex;align-items:center;justify-content:flex-end;gap:6px;flex:0 0 auto;margin-left:auto}
+.toolbar-icon-btn{display:inline-flex;align-items:center;justify-content:center;width:35px;height:34px;flex:none;border:1px solid transparent;border-radius:4px;background:transparent;color:#f5f5f5;cursor:pointer;text-decoration:none}
+.toolbar-icon-btn:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.1)}.toolbar-icon-btn svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.image-stage{height:calc(100% - 54px);min-height:0;display:flex;align-items:center;justify-content:center;overflow:auto;background:#fff;padding:12px}
+.certificate-image{display:block;flex:none;width:auto;height:auto;max-width:none;max-height:none;object-fit:contain;border:1px solid #d8dee8;background:#fff;box-shadow:0 1px 5px rgba(15,23,42,.12)}.error{padding:24px;border:1px solid var(--line);border-radius:12px;color:#7b8ba4;background:#fff;min-height:80px}
+@media(max-width:600px){.topin{padding:12px 0;align-items:flex-start;flex-direction:column}.actions{width:100%}.btn{font-size:.74rem;padding:9px 11px}.viewer{height:70vh;min-height:360px}.image-toolbar{gap:5px;padding:7px 8px;flex-wrap:wrap;justify-content:flex-start}.image-file{flex:1 1 100%;font-size:.74rem}.image-zoom-controls{gap:1px}.zoom-btn,.zoom-download{min-height:30px;padding:5px 7px;font-size:.69rem}.image-toolbar-actions{margin-left:auto}.toolbar-divider{height:26px}.image-stage{padding:8px}}
 </style>
 </head>
 <body>
 <header class="top"><div class="topin"><a class="brand" href="index.html#home">Siva Kumar · Portfolio</a><div class="actions"><a class="btn" id="back" href="index.html#home">← Back</a><a class="btn primary" id="download" href="#" download>Download file ↓</a></div></div></header>
-<main><div class="eyebrow">Portfolio document viewer</div><h1 id="title">Document</h1><div id="content" class="viewer"><iframe id="pdf" title="Document preview"></iframe></div><img id="image" class="image-view" alt="Certificate or document preview"></main>
+<main><div class="eyebrow">Portfolio document viewer</div><h1 id="title">Document</h1><div id="content" class="viewer"><iframe id="pdf" title="Document preview"></iframe><div id="image-viewer" class="image-viewer" aria-label="Image document viewer"><div class="image-toolbar" role="toolbar" aria-label="Image document controls"><div class="image-file"><span class="toolbar-menu" aria-hidden="true">☰</span><span id="image-filename" class="image-file-name">certificate image</span></div><span class="toolbar-divider" aria-hidden="true"></span><div class="image-zoom-controls" aria-label="Zoom controls"><button class="zoom-btn" id="zoom-out" type="button" aria-label="Zoom out" title="Zoom out">−</button><span class="zoom-level" id="zoom-level" aria-live="polite">Fit</span><button class="zoom-btn" id="zoom-in" type="button" aria-label="Zoom in" title="Zoom in">+</button></div><span class="toolbar-divider" aria-hidden="true"></span><button class="zoom-btn" id="zoom-fit" type="button" title="Fit image to viewer">Fit</button><button class="zoom-btn" id="zoom-actual" type="button" title="Show image at 100 percent">100%</button><div class="image-toolbar-actions"><a class="toolbar-icon-btn" id="image-download" href="#" download aria-label="Download image" title="Download image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 17v3h16v-3"/></svg></a><button class="toolbar-icon-btn" id="print-image" type="button" aria-label="Print image" title="Print image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8V3h10v5M6 17H4V9h16v8h-2M7 14h10v7H7zM17 11h.01"/></svg></button></div></div><div id="image-stage" class="image-stage"><img id="image" class="certificate-image" alt="Certificate or document preview"/></div></div></div></main>
 <script>
 (function(){
  const params=new URLSearchParams(location.search);
@@ -47,6 +61,7 @@ main{width:min(94%,1440px);margin:24px auto 48px}.eyebrow{font:500 .7rem "DM Mon
  const allowed=/^assets\/[a-zA-Z0-9_./ -]+\.(pdf|jpg|jpeg|png|webp)$/i;
  const heading=document.getElementById('title'),download=document.getElementById('download'),content=document.getElementById('content'),backButton=document.getElementById('back');
  heading.textContent=title;document.title=title+' | Siva Kumar Portfolio';
+ 
  const sectionMap={aws:'aws',certificates:'certificates','foundation-future':'additional-certifications',experience:'experience',home:'home'};
  backButton.href='index.html#'+(sectionMap[back]||'home');
  // Same-tab links make browser Back work naturally. The visible Back button uses history when possible.
@@ -59,9 +74,38 @@ main{width:min(94%,1440px);margin:24px auto 48px}.eyebrow{font:500 .7rem "DM Mon
    content.innerHTML='<div class="error">This document link is invalid. Return to the portfolio and open the document again.</div>';
    download.style.display='none';return;
  }
- download.href=raw;download.setAttribute('download',raw.split('/').pop());
+ const filename=raw.split('/').pop()||'download';
+ download.href=raw;download.setAttribute('download',filename);
+ // Keep local asset download links explicit so the header button works for images and PDFs.
+ download.addEventListener('click',function(){download.href=raw;download.setAttribute('download',filename);});
  if(/\.(jpg|jpeg|png|webp)$/i.test(raw)){
-   content.style.display='none';const img=document.getElementById('image');img.src=raw;img.style.display='block';
+   const pdf=document.getElementById('pdf'),imageViewer=document.getElementById('image-viewer'),img=document.getElementById('image'),stage=document.getElementById('image-stage'),zoomLabel=document.getElementById('zoom-level'),imageDownload=document.getElementById('image-download'),imageFilename=document.getElementById('image-filename');
+   pdf.style.display='none';imageViewer.style.display='flex';img.alt=title+' — certificate or document image';img.src=raw;
+   if(imageFilename)imageFilename.textContent=filename;
+   imageDownload.href=raw;imageDownload.setAttribute('download',filename);
+   let currentScale=1,fitMode=true;
+   function applyScale(scale){
+     if(!img.naturalWidth||!img.naturalHeight)return;
+     currentScale=Math.max(.1,Math.min(4,scale));
+     img.style.width=Math.round(img.naturalWidth*currentScale)+'px';
+     img.style.height=Math.round(img.naturalHeight*currentScale)+'px';
+     zoomLabel.textContent=Math.round(currentScale*100)+'%';
+   }
+   function fitImage(){
+     if(!img.naturalWidth||!img.naturalHeight)return;
+     const availableWidth=Math.max(160,stage.clientWidth-28),availableHeight=Math.max(160,stage.clientHeight-28);
+     const scale=Math.min(availableWidth/img.naturalWidth,availableHeight/img.naturalHeight,1);
+     fitMode=true;applyScale(scale);zoomLabel.textContent='Fit · '+Math.round(currentScale*100)+'%';
+     stage.scrollTop=0;stage.scrollLeft=0;
+   }
+   img.addEventListener('load',fitImage);
+   document.getElementById('zoom-out').addEventListener('click',function(){fitMode=false;applyScale(currentScale/1.2);});
+   document.getElementById('zoom-in').addEventListener('click',function(){fitMode=false;applyScale(currentScale*1.2);});
+   document.getElementById('zoom-fit').addEventListener('click',fitImage);
+   document.getElementById('zoom-actual').addEventListener('click',function(){fitMode=false;applyScale(1);stage.scrollTop=0;stage.scrollLeft=0;});
+   document.getElementById('print-image').addEventListener('click',function(){const w=window.open('','_blank','noopener,noreferrer');if(!w)return;w.document.write('<!doctype html><html><head><title>'+filename.replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})+'</title><style>@page{margin:10mm}body{margin:0;display:grid;place-items:center;min-height:100vh}img{max-width:100%;max-height:96vh;object-fit:contain}</style></head><body><img src="'+raw.replace(/&/g,'&amp;').replace(/"/g,'&quot;')+'" alt="Certificate image" onload="setTimeout(()=>window.print(),250)"></body></html>');w.document.close();});
+   window.addEventListener('resize',function(){if(fitMode)fitImage();});
+   imageDownload.addEventListener('click',function(){imageDownload.href=raw;imageDownload.setAttribute('download',filename);});
  }else{document.getElementById('pdf').src=raw+'#view=FitH';}
 })();
 </script>
