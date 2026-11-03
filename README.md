@@ -162,7 +162,7 @@ Each task has a preview image, technical steps, learning outcomes, and an indivi
 
 The portfolio presents the following internship experiences:
 
-- **Machine Learning Intern:** IBM SkillsBuild and Edunet Foundation — Adult Census Income classification workflow.
+- **Machine Learning Intern:** IBM SkillsBuild and Edunet Foundation — Employee Salary Prediction.
 - **Python Intern:** APSSDC — Python programming and Flask-based marks calculator.
 - **Generative AI Intern:** Prodigy InfoTech — Generative AI concepts and practical AI-assisted workflows.
 - **AWS Cloud Computing Intern:** EWB Edutech Private Limited — VPC networking, route tables, security groups, EC2 access, VPC Peering, and connectivity troubleshooting.
