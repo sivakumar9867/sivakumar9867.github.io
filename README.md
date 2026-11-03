@@ -178,7 +178,9 @@ The portfolio includes:
 - Additional learning certificates with previews and source documents where available.
 - Academic Honors & Scholarships, including the Yuva Unstoppable Merit Scholarship.
 
-PDF and image assets.
+## Document Viewer
+
+The separate `document.html` page provides a dedicated viewer for local PDF and image assets.
 
 It supports:
 - Viewing PDF documents and certificate images.
