@@ -178,6 +178,58 @@ The portfolio includes:
 - Additional learning certificates with previews and source documents where available.
 - Academic Honors & Scholarships, including the Yuva Unstoppable Merit Scholarship.
 
-## Document Viewer
+PDF and image assets.
 
-The separate `document.html` page provides a dedicated viewer for local
+It supports:
+- Viewing PDF documents and certificate images.
+- Navigation back to the portfolio.
+- Download actions for supported documents.
+- Image viewing controls, including zoom and download.
+
+Local document links use the document viewer. External destinations such as GitHub repositories, LinkedIn, and certification verification links open in a new tab.
+
+## Repository Structure
+
+```text
+sivakumar9867.github.io/
+│
+├── index.html
+├── document.html
+├── README.md
+├── CNAME
+│
+└── assets/
+    ├── Siva_Kumar_Resume.pdf
+    ├── aws-vpc-peering-architecture.svg
+    ├── aws-vpc-peering/
+    ├── aws-previews/
+    ├── aws-proofs/
+    ├── certificates/
+    └── previews/
+```
+
+## Deployment
+
+The project is a static website hosted using GitHub Pages.
+
+The repository includes a `CNAME` file for the custom domain.
+
+To maintain the deployment:
+
+1. Keep `index.html` and `document.html` in the repository root.
+2. Preserve the `assets/` folder and its relative paths.
+3. Configure GitHub Pages to deploy from the intended branch.
+4. Keep the custom domain configured through the `CNAME` file.
+
+No backend server or package installation is required to serve the static portfolio.
+
+## Contact
+
+- **Portfolio:** [sivakumar.tech](https://sivakumar.tech)
+- **GitHub:** [github.com/sivakumar9867](https://github.com/sivakumar9867)
+- **LinkedIn:** [linkedin.com/in/sivakumar986](https://linkedin.com/in/sivakumar986)
+- **Email:** sivakumar986@outlook.com
+
+---
+
+**Designed and maintained by Siva Kumar.**
