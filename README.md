@@ -67,9 +67,11 @@ Static HTML, CSS and JavaScript site intended for GitHub Pages. Keep the complet
 - LinkedIn: https://linkedin.com/in/sivakumar986
 - GitHub: https://github.com/sivakumar9867
 
-## Design credit
+## Crafted by
 
-The interface design process was guided by [UnsLOP](https://github.com/heydamir/unslop) by Damir Sokolovsky, licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+Designed, developed and crafted by **Derangula Siva Kumar**. The portfolio's content, implementation, page structure and custom refinements were created for this personal website.
+
+The visual direction was informed by [UnsLOP](https://github.com/heydamir/unslop) by Damir Sokolovsky, licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 
 The visible site edition label is **Portfolio 2026**.
 
