@@ -1,36 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#07101d">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#f3f0e7" name="theme-color"/>
 <title>Document | Siva Kumar Portfolio</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
-:root{--bg:#07101d;--text:#f4f7ff;--muted:#a8b6cd;--line:rgba(186,207,255,.16);--cyan:#35d8ff;--blue:#4e8cff;--violet:#9a72ff;--pink:#f26bd6}
-*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 5% 10%,rgba(44,153,255,.14),transparent 29%),radial-gradient(ellipse at 92% 16%,rgba(153,88,255,.13),transparent 27%),var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif}
-.top{position:sticky;top:0;z-index:5;background:rgba(7,16,29,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.topin{width:min(94%,1440px);min-height:74px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:800;letter-spacing:-.05em;font-size:1.15rem;background:linear-gradient(90deg,var(--cyan),var(--blue),var(--violet),var(--pink));color:transparent;background-clip:text;-webkit-background-clip:text}.actions{display:flex;gap:9px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 14px;border:1px solid var(--line);border-radius:10px;color:var(--text);font-weight:700;font-size:.8rem;text-decoration:none;background:rgba(11,23,40,.7);transition:.2s}.btn:hover{border-color:var(--cyan);background:rgba(53,216,255,.09)}.btn.primary{background:linear-gradient(110deg,var(--cyan),#8a83ff);color:#07101d;border:0}
-main{width:min(94%,1440px);margin:24px auto 48px}.eyebrow{font:500 .7rem "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan)}h1{font-size:clamp(1.5rem,3vw,2.4rem);line-height:1.15;letter-spacing:-.05em;margin:8px 0 18px;overflow-wrap:anywhere}.viewer{height:calc(100vh - 190px);min-height:420px;border:1px solid rgba(255,255,255,.86);box-shadow:0 0 0 1px rgba(255,255,255,.07),0 14px 35px rgba(0,0,0,.12);border-radius:15px;overflow:hidden;background:#fff}iframe{width:100%;height:100%;border:0;background:white}
-.image-viewer{display:none;width:100%;height:100%;background:#fff;color:#172033;flex-direction:column}
-.image-toolbar{display:flex;align-items:center;gap:10px;flex-wrap:nowrap;min-height:54px;padding:7px 14px;border-bottom:1px solid #292929;background:#3b3b3b;color:#f5f5f5;overflow:hidden;font-family:Arial,Manrope,system-ui,sans-serif}
-.image-file{display:flex;align-items:center;gap:15px;flex:1 1 280px;min-width:0;overflow:hidden;font-size:.83rem;font-weight:600;color:#f5f5f5;white-space:nowrap}
-.image-file-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.toolbar-menu{display:inline-flex;align-items:center;justify-content:center;flex:none;width:24px;color:#ededed;font-size:1rem}
-.toolbar-divider{height:30px;width:1px;flex:none;background:rgba(255,255,255,.22)}
-.image-zoom-controls{display:flex;align-items:center;justify-content:center;gap:5px;flex:none}
-.zoom-btn,.zoom-download{display:inline-flex;align-items:center;justify-content:center;min-width:34px;min-height:31px;padding:5px 9px;border:1px solid transparent;border-radius:3px;background:transparent;color:#f4f4f4;font:500 .78rem Arial,Manrope,system-ui,sans-serif;text-decoration:none;cursor:pointer}
-.zoom-btn:hover,.zoom-download:hover{border-color:rgba(255,255,255,.12);background:rgba(255,255,255,.1)}.zoom-level{min-width:50px;text-align:center;padding:5px 7px;background:#252525;color:#fff;font:500 .74rem Arial,Manrope,system-ui,sans-serif}.zoom-btn:focus-visible,.zoom-download:focus-visible{outline:2px solid #8fcfff;outline-offset:2px}
-.image-toolbar-actions{display:flex;align-items:center;justify-content:flex-end;gap:6px;flex:0 0 auto;margin-left:auto}
-.toolbar-icon-btn{display:inline-flex;align-items:center;justify-content:center;width:35px;height:34px;flex:none;border:1px solid transparent;border-radius:4px;background:transparent;color:#f5f5f5;cursor:pointer;text-decoration:none}
-.toolbar-icon-btn:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.1)}.toolbar-icon-btn svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.image-stage{height:calc(100% - 54px);min-height:0;display:flex;align-items:center;justify-content:center;overflow:auto;background:#fff;padding:12px}
-.certificate-image{display:block;flex:none;width:auto;height:auto;max-width:none;max-height:none;object-fit:contain;border:1px solid #d8dee8;background:#fff;box-shadow:0 1px 5px rgba(15,23,42,.12)}.error{padding:24px;border:1px solid var(--line);border-radius:12px;color:#7b8ba4;background:#fff;min-height:80px}
-@media(max-width:600px){.topin{padding:12px 0;align-items:flex-start;flex-direction:column}.actions{width:100%}.btn{font-size:.74rem;padding:9px 11px}.viewer{height:70vh;min-height:360px}.image-toolbar{gap:5px;padding:7px 8px;flex-wrap:wrap;justify-content:flex-start}.image-file{flex:1 1 100%;font-size:.74rem}.image-zoom-controls{gap:1px}.zoom-btn,.zoom-download{min-height:30px;padding:5px 7px;font-size:.69rem}.image-toolbar-actions{margin-left:auto}.toolbar-divider{height:26px}.image-stage{padding:8px}}
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap');
+:root{--paper:#f3f0e7;--surface:#fbf9f2;--ink:#252e28;--ink2:#45534a;--muted:#6d786f;--rule:#cbc9bd;--accent:#a94f37;--accent-dark:#893b2a;--forest:#34483d}
+*{box-sizing:border-box}html{min-height:100%;background:var(--paper)}body{margin:0;min-height:100vh;background:var(--paper);color:var(--ink);font:400 16px/1.65 "DM Sans",Arial,sans-serif}
+a{color:inherit;text-decoration:none}button{font:inherit}
+.top{position:sticky;top:0;z-index:10;background:rgba(243,240,231,.97);border-bottom:1px solid var(--rule)}.topin{width:min(92%,1220px);min-height:76px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:11px;font-size:.82rem;font-weight:700}.brand-stamp{display:grid;place-items:center;width:34px;height:34px;background:var(--accent);color:#fffdf7;font:500 .68rem "DM Mono",monospace;transform:rotate(-3deg);box-shadow:4px 4px 0 #d6d0c0}.brand-name{display:flex;flex-direction:column;line-height:1.15}.brand-name small{margin-top:3px;color:var(--muted);font:500 .54rem "DM Mono",monospace;letter-spacing:.07em;text-transform:uppercase}
+.actions{display:flex;flex-wrap:wrap;gap:8px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:8px 12px;border:1px solid var(--ink);border-radius:2px;background:transparent;color:var(--ink);font-size:.72rem;font-weight:700;transition:background .16s,color .16s,border-color .16s}.btn:hover{background:var(--ink);color:#fffdf7}.btn.primary{background:var(--accent);border-color:var(--accent);color:#fffdf7}.btn.primary:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+main{width:min(92%,1220px);margin:34px auto 48px}.eyebrow{color:var(--accent);font:500 .62rem "DM Mono",monospace;letter-spacing:.06em;text-transform:uppercase}h1{margin:7px 0 18px;color:var(--ink);font:400 clamp(2.25rem,4vw,3.5rem)/1.04 "DM Serif Display",Georgia,serif;letter-spacing:-.035em;overflow-wrap:anywhere}
+.viewer{height:min(78vh,920px);min-height:520px;overflow:hidden;border:1px solid #bfc0b4;background:#fff;box-shadow:6px 6px 0 rgba(37,46,40,.055)}#pdf{display:block;width:100%;height:100%;border:0;background:#fff}
+.image-viewer{display:none;width:100%;height:100%;min-height:0;flex-direction:column;background:#deded7}.image-toolbar{min-height:48px;display:flex;align-items:center;gap:10px;padding:7px 12px;background:#343a35;color:#f3f0e7;border-bottom:1px solid #252c27;font-family:"DM Sans",Arial,sans-serif}.image-file{display:flex;align-items:center;gap:10px;flex:1 1 240px;min-width:0;overflow:hidden;font-size:.75rem;font-weight:600;white-space:nowrap}.image-file-name{overflow:hidden;text-overflow:ellipsis}.toolbar-menu{display:inline-grid;place-items:center;width:22px;flex:none;color:#e9e5d9;font-size:.95rem}.toolbar-divider{width:1px;height:27px;flex:none;background:rgba(243,240,231,.2)}.image-zoom-controls{display:flex;align-items:center;gap:4px;flex:none}.zoom-btn,.zoom-download{display:inline-flex;align-items:center;justify-content:center;min-width:32px;min-height:30px;padding:5px 8px;border:1px solid transparent;border-radius:2px;background:transparent;color:#f3f0e7;font:500 .71rem "DM Sans",Arial,sans-serif;text-decoration:none;cursor:pointer}.zoom-btn:hover,.zoom-download:hover{background:rgba(243,240,231,.12);border-color:rgba(243,240,231,.15)}.zoom-level{min-width:54px;padding:5px 7px;background:#252b26;color:#f3f0e7;text-align:center;font:500 .67rem "DM Mono",monospace}.image-toolbar-actions{display:flex;align-items:center;gap:5px;margin-left:auto}.toolbar-icon-btn{display:inline-flex;align-items:center;justify-content:center;width:33px;height:32px;border:1px solid transparent;border-radius:2px;background:transparent;color:#f3f0e7;cursor:pointer}.toolbar-icon-btn:hover{background:rgba(243,240,231,.12);border-color:rgba(243,240,231,.15)}.toolbar-icon-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.image-stage{display:flex;align-items:center;justify-content:center;flex:1;min-height:0;overflow:auto;padding:15px;background:#dcdcd5}.certificate-image{display:block;flex:none;width:auto;height:auto;max-width:none;max-height:none;object-fit:contain;border:1px solid #c8c8c1;background:#fff;box-shadow:0 1px 4px rgba(20,26,22,.13)}.error{min-height:90px;padding:20px;border:1px solid var(--rule);background:var(--surface);color:var(--ink2)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(max-width:650px){.topin{min-height:70px;align-items:flex-start;padding:12px 0;flex-direction:column;gap:10px}.actions{width:100%}.btn{font-size:.68rem;padding:8px 10px}main{margin:25px auto 35px}.viewer{height:72vh;min-height:400px}.image-toolbar{gap:5px;padding:7px 8px;flex-wrap:wrap}.image-file{flex:1 1 100%;font-size:.7rem}.image-zoom-controls{gap:1px}.zoom-btn{min-width:28px;padding:4px 6px;font-size:.65rem}.image-toolbar-actions{margin-left:auto}.toolbar-divider{height:23px}.image-stage{padding:8px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important}}
+
+@media print{
+ body{background:#fff!important} .top,.eyebrow,main>h1{display:none!important}
+ main{width:100%;margin:0!important} .viewer{height:auto!important;min-height:0!important;border:0!important;box-shadow:none!important;overflow:visible!important}
+ #pdf{display:none!important} #image-viewer{display:flex!important;height:auto!important;min-height:0!important;background:#fff!important}
+ .image-toolbar{display:none!important} .image-stage{display:block!important;overflow:visible!important;padding:0!important;background:#fff!important}
+ .certificate-image{display:block!important;max-width:100%!important;max-height:96vh!important;width:auto!important;height:auto!important;margin:0 auto!important;border:0!important;box-shadow:none!important}
+}
+
+/* Header portrait replaces the SK stamp without changing its footprint. */
+.brand-photo{display:block;flex:0 0 36px;width:36px;height:36px;object-fit:cover;object-position:center 38%;transform:rotate(-3deg);box-shadow:4px 4px 0 #d6d0c0;border:1px solid var(--accent-dark);border-radius:0}
+@media(max-width:680px){.brand-photo{width:36px;height:36px;flex-basis:36px}}
 </style>
 </head>
 <body>
-<header class="top"><div class="topin"><a class="brand" href="index.html#home">Siva Kumar · Portfolio</a><div class="actions"><a class="btn" id="back" href="index.html#home">← Back</a><a class="btn primary" id="download" href="#" download>Download file ↓</a></div></div></header>
-<main><div class="eyebrow">Portfolio document viewer</div><h1 id="title">Document</h1><div id="content" class="viewer"><iframe id="pdf" title="Document preview"></iframe><div id="image-viewer" class="image-viewer" aria-label="Image document viewer"><div class="image-toolbar" role="toolbar" aria-label="Image document controls"><div class="image-file"><span class="toolbar-menu" aria-hidden="true">☰</span><span id="image-filename" class="image-file-name">certificate image</span></div><span class="toolbar-divider" aria-hidden="true"></span><div class="image-zoom-controls" aria-label="Zoom controls"><button class="zoom-btn" id="zoom-out" type="button" aria-label="Zoom out" title="Zoom out">−</button><span class="zoom-level" id="zoom-level" aria-live="polite">Fit</span><button class="zoom-btn" id="zoom-in" type="button" aria-label="Zoom in" title="Zoom in">+</button></div><span class="toolbar-divider" aria-hidden="true"></span><button class="zoom-btn" id="zoom-fit" type="button" title="Fit image to viewer">Fit</button><button class="zoom-btn" id="zoom-actual" type="button" title="Show image at 100 percent">100%</button><div class="image-toolbar-actions"><a class="toolbar-icon-btn" id="image-download" href="#" download aria-label="Download image" title="Download image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 17v3h16v-3"/></svg></a><button class="toolbar-icon-btn" id="print-image" type="button" aria-label="Print image" title="Print image"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8V3h10v5M6 17H4V9h16v8h-2M7 14h10v7H7zM17 11h.01"/></svg></button></div></div><div id="image-stage" class="image-stage"><img id="image" class="certificate-image" alt="Certificate or document preview"/></div></div></div></main>
+<header class="top"><div class="topin"><a class="brand" href="./index.html#home"><img class="brand-photo" src="./assets/siva-kumar-profile.png" alt="Siva Kumar" width="36" height="36" loading="eager"/><span class="brand-name">Siva Kumar<small>Developer · AI · Automation</small></span></a><div class="actions"><a class="btn" href="./index.html#home" id="back">← Back</a><a class="btn primary" download="" href="#" id="download">Download file ↓</a></div></div></header>
+<main><div class="eyebrow">Portfolio document viewer</div><h1 id="title">Document</h1><div class="viewer" id="content"><iframe id="pdf" title="Document preview"></iframe><div aria-label="Image document viewer" class="image-viewer" id="image-viewer"><div aria-label="Image document controls" class="image-toolbar" role="toolbar"><div class="image-file"><span aria-hidden="true" class="toolbar-menu">☰</span><span class="image-file-name" id="image-filename">certificate image</span></div><span aria-hidden="true" class="toolbar-divider"></span><div aria-label="Zoom controls" class="image-zoom-controls"><button aria-label="Zoom out" class="zoom-btn" id="zoom-out" title="Zoom out" type="button">−</button><span aria-live="polite" class="zoom-level" id="zoom-level">Fit</span><button aria-label="Zoom in" class="zoom-btn" id="zoom-in" title="Zoom in" type="button">+</button></div><span aria-hidden="true" class="toolbar-divider"></span><button class="zoom-btn" id="zoom-fit" title="Fit image to viewer" type="button">Fit</button><button class="zoom-btn" id="zoom-actual" title="Show image at 100 percent" type="button">100%</button><div class="image-toolbar-actions"><a aria-label="Download image" class="toolbar-icon-btn" download="" href="#" id="image-download" title="Download image"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 17v3h16v-3"></path></svg></a><button aria-label="Print image" class="toolbar-icon-btn" id="print-image" title="Print image" type="button"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 8V3h10v5M6 17H4V9h16v8h-2M7 14h10v7H7zM17 11h.01"></path></svg></button></div></div><div class="image-stage" id="image-stage"><img alt="Certificate or document preview" class="certificate-image" id="image"/></div></div></div></main>
 <script>
 (function(){
  const params=new URLSearchParams(location.search);
@@ -57,27 +63,36 @@ main{width:min(94%,1440px);margin:24px auto 48px}.eyebrow{font:500 .7rem "DM Mon
    raw=decoded;break;
  }
  raw=raw.replace(/\\/g,'/').replace(/^\/+/, '');
- // Only allow local portfolio assets; reject traversal, absolute URLs, and query fragments.
+ // Allow local portfolio assets and read-only raw image files from Siva Kumar's own GitHub repositories.
+ // All other absolute URLs and traversal paths are rejected.
  const allowed=/^assets\/[a-zA-Z0-9_./ -]+\.(pdf|jpg|jpeg|png|webp)$/i;
+ let remoteImage=false;
+ try{const u=new URL(raw);remoteImage=u.protocol==='https:'&&u.hostname==='raw.githubusercontent.com'&&u.pathname.startsWith('/sivakumar9867/')&&/\.(jpg|jpeg|png|webp)$/i.test(u.pathname); }catch(_){}
+ const isAllowed=allowed.test(raw)||remoteImage;
  const heading=document.getElementById('title'),download=document.getElementById('download'),content=document.getElementById('content'),backButton=document.getElementById('back');
- heading.textContent=title;document.title=title+' | Siva Kumar Portfolio';
+ heading.textContent=title;document.title=title+' | Siva Kumar · Portfolio 2026';
  
- const sectionMap={aws:'aws',certificates:'certificates','foundation-future':'additional-certifications',experience:'experience',home:'home'};
- backButton.href='index.html#'+(sectionMap[back]||'home');
+ const sectionMap={aws:'aws',certificates:'certificates','foundation-future':'additional-certifications',experience:'experience',projects:'projects',home:'home'};
+ backButton.href='./index.html#'+(sectionMap[back]||'home');
  // Same-tab links make browser Back work naturally. The visible Back button uses history when possible.
  backButton.addEventListener('click',function(e){
    if(history.length>1 && document.referrer){
      try{if(new URL(document.referrer).origin===location.origin){e.preventDefault();history.back();}}catch(_){}
    }
  });
- if(!allowed.test(raw)||raw.split('/').includes('..')){
+ if(!isAllowed||raw.split('/').includes('..')){
    content.innerHTML='<div class="error">This document link is invalid. Return to the portfolio and open the document again.</div>';
    download.style.display='none';return;
  }
- const filename=raw.split('/').pop()||'download';
+ const filename=(remoteImage?new URL(raw).pathname:raw).split('/').pop()||'download';
  download.href=raw;download.setAttribute('download',filename);
- // Keep local asset download links explicit so the header button works for images and PDFs.
- download.addEventListener('click',function(){download.href=raw;download.setAttribute('download',filename);});
+ async function saveImageFile(){
+   if(!remoteImage){const a=document.createElement('a');a.href=raw;a.download=filename;document.body.appendChild(a);a.click();a.remove();return;}
+   try{const response=await fetch(raw,{mode:'cors',cache:'no-store'});if(!response.ok)throw new Error('Download failed');const blob=await response.blob();const objectUrl=URL.createObjectURL(blob);const a=document.createElement('a');a.href=objectUrl;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(objectUrl),1500);}
+   catch(_){const a=document.createElement('a');a.href=raw;a.download=filename;a.rel='noopener';document.body.appendChild(a);a.click();a.remove();}
+ }
+ // Local files download directly; approved raw GitHub project screenshots are fetched as a file blob.
+ download.addEventListener('click',function(e){if(remoteImage){e.preventDefault();saveImageFile();}});
  if(/\.(jpg|jpeg|png|webp)$/i.test(raw)){
    const pdf=document.getElementById('pdf'),imageViewer=document.getElementById('image-viewer'),img=document.getElementById('image'),stage=document.getElementById('image-stage'),zoomLabel=document.getElementById('zoom-level'),imageDownload=document.getElementById('image-download'),imageFilename=document.getElementById('image-filename');
    pdf.style.display='none';imageViewer.style.display='flex';img.alt=title+' — certificate or document image';img.src=raw;
@@ -103,9 +118,9 @@ main{width:min(94%,1440px);margin:24px auto 48px}.eyebrow{font:500 .7rem "DM Mon
    document.getElementById('zoom-in').addEventListener('click',function(){fitMode=false;applyScale(currentScale*1.2);});
    document.getElementById('zoom-fit').addEventListener('click',fitImage);
    document.getElementById('zoom-actual').addEventListener('click',function(){fitMode=false;applyScale(1);stage.scrollTop=0;stage.scrollLeft=0;});
-   document.getElementById('print-image').addEventListener('click',function(){const w=window.open('','_blank','noopener,noreferrer');if(!w)return;w.document.write('<!doctype html><html><head><title>'+filename.replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})+'</title><style>@page{margin:10mm}body{margin:0;display:grid;place-items:center;min-height:100vh}img{max-width:100%;max-height:96vh;object-fit:contain}</style></head><body><img src="'+raw.replace(/&/g,'&amp;').replace(/"/g,'&quot;')+'" alt="Certificate image" onload="setTimeout(()=>window.print(),250)"></body></html>');w.document.close();});
+   document.getElementById('print-image').addEventListener('click',function(){window.print();});
    window.addEventListener('resize',function(){if(fitMode)fitImage();});
-   imageDownload.addEventListener('click',function(){imageDownload.href=raw;imageDownload.setAttribute('download',filename);});
+   imageDownload.addEventListener('click',function(e){if(remoteImage){e.preventDefault();saveImageFile();}});
  }else{document.getElementById('pdf').src=raw+'#view=FitH';}
 })();
 </script>

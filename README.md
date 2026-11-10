@@ -1,237 +1,85 @@
-# Siva Kumar — Developer Portfolio
+# Siva Kumar — Portfolio 2026
 
-A personal developer portfolio showcasing my projects, technical skills, internship experience, certifications, AWS hands-on work, and academic achievements.
+Personal portfolio for **Derangula Siva Kumar**, a Computer Science & Engineering student specializing in Artificial Intelligence at Parul University.
 
-🌐 **Live Portfolio:** [https://sivakumar.tech](https://sivakumar.tech)
+🌐 **Portfolio:** [sivakumar.tech](https://sivakumar.tech)
 
-## Overview
+## Introduction
 
-This portfolio is built as a responsive static website using HTML, CSS, and JavaScript. It brings together my technical projects, professional experience, cloud computing work, certifications, and contact information in one place.
+The homepage introduces Siva Kumar as a developer focused on building scalable applications and automating workflows to turn ideas into execution. The visual direction is an **engineering fieldbook**: warm paper surfaces, graphite typography, restrained oxide-copper accents, numbered notes and evidence-led project storytelling. The hero includes a six-slide, manually navigable field-note carousel covering the five selected projects and the featured AWS VPC Peering build. Its slide counter is fixed in a consistent footer position.
 
-The website is hosted using GitHub Pages and uses a custom domain.
+## Portfolio sections
 
-## Portfolio Sections
+- About, education, professional interests and internship experience
+- Five selected projects, each with its own internal project-detail page, repository link and README link
+- Skills across programming, development, tools, AI/ML and AWS cloud technologies
+- AWS Labs: a featured VPC Peering detail page and 17 individual AWS task detail pages, with previews, technical steps, learning outcomes and evidence PDFs
+- Internship certificates, including the SAP Generative AI Developer certification and original EWB AWS internship completion certificate
+- Additional certificates with previews and source documents
+- Academic Honors & Scholarships, including the Yuva Unstoppable Merit Scholarship
+- Contact links, downloadable resume and a document viewer for PDFs and certificate images
 
-| Section | What it includes |
-|---|---|
-| Home | Introduction, career focus, and resume access |
-| About | Academic background, interests, and goals |
-| Experience | Internship experience and related certificates |
-| Selected Projects | Four featured software, AI, and machine learning projects |
-| AWS Hands-on Experience | Featured VPC Peering project and 17 additional AWS tasks |
-| Skills | Programming, development, AI/ML, tools, and AWS |
-| Certifications | Internship certificates and additional credentials |
-| Academic Honors | Scholarship and academic recognition |
-| Contact | Email, LinkedIn, and GitHub links |
+## Selected projects
 
-## Featured Projects
+1. [SAP Generative AI-Based Customer Feedback Analysis and Issue Prioritization System](https://github.com/sivakumar9867/sap-generative-ai-feedback-analyzer) — SAP AI Launchpad Prompt Editor workflow for sentiment analysis, issue classification, order/product reference extraction, structured JSON, multi-issue prioritization and actionable resolution points. Its internal case-study page includes six screenshots and a task-specific comparison of Gemini 2.5 Flash Lite, GPT-4.1 nano and GPT-5-Mini. The observed Gemini result is described as a project example, not a universal benchmark.
+2. [Employee Salary Prediction](https://github.com/sivakumar9867/Employee-Salary-Prediction) — Adult Census Income classification; project README reports KNN 82.69%, Logistic Regression 82.73%, and MLP 85.18% accuracy.
+3. [Mana Cinema — Telugu Movie Recommendation System](https://github.com/sivakumar9867/movie-recommendation-system) — content-based recommendations using TF-IDF and cosine similarity, served through Flask.
+4. [MARKS / LAB — Result Studio](https://github.com/sivakumar9867/marks-calculator) — Flask application with live total/average previews, validation, per-subject result indicators and a print-friendly report.
+5. [Personal Portfolio Website](https://github.com/sivakumar9867/sivakumar9867.github.io) — responsive portfolio built with HTML, CSS and JavaScript, deployed through GitHub Pages with a custom domain, project case studies, document viewer and AWS evidence.
 
-### 1. SAP Generative AI-Based Customer Feedback Analysis and Issue Prioritization System
+Each project case study opens at `project.html?project=<project-id>` in the **same browser tab**. It retains the Fieldbook navigation and offers Back to Projects and Back to Portfolio controls.
 
-A Generative AI project developed using the SAP AI Launchpad Prompt Editor.
+## AWS hands-on work
 
-**Key capabilities:**
-- Customer sentiment analysis.
-- Issue categorization and prioritization.
-- Order and product reference extraction.
-- Multi-issue extraction from a single customer message.
-- Structured JSON outputs and actionable resolution points.
-- Qualitative comparison of Gemini 2.5 Flash Lite, GPT-4.1 nano, and GPT-5-Mini for the project task.
+The AWS section features a dedicated VPC Peering page with the problem statement, internship context, architecture diagram, configuration notes, test outcomes and 17 individually explained evidence screenshots. The other 17 hands-on tasks are grouped into networking and security; compute, storage and hosting; and identity, data and monitoring. Each task opens its own detail route at `aws-project.html?task=<number>` in the same browser tab. VPC Peering uses `aws-project.html?type=vpc-peering`.
 
-Repository: [SAP Generative AI Feedback Analyzer](https://github.com/sivakumar9867/sap-generative-ai-feedback-analyzer)
+## Document viewer
 
-### 2. Employee Salary Prediction
+Local resume, certificate and AWS evidence links open through `document.html`. It provides Back and Download actions, an embedded PDF viewer, and an image viewer with fit, zoom, 100%, download and print controls. All internal navigation stays in the current tab; GitHub, LinkedIn and Credly are genuine external destinations and also open in the current tab.
 
-A machine learning classification project using the Adult Census Income dataset to predict whether an individual's income falls into the `<=50K` or `>50K` category.
-
-Models evaluated:
-- K-Nearest Neighbors (KNN)
-- Logistic Regression
-- Multi-Layer Perceptron (MLP)
-
-Reported model accuracies are documented in the project repository.
-
-Repository: [Employee Salary Prediction](https://github.com/sivakumar9867/Employee-Salary-Prediction)
-
-### 3. Mana Cinema — Telugu Movie Recommendation System
-
-A content-based recommendation application for Telugu movies using TF-IDF and cosine similarity, served through Flask.
-
-Repository: [Movie Recommendation System](https://github.com/sivakumar9867/movie-recommendation-system)
-
-### 4. MARKS / LAB — Result Studio
-
-A Flask-based marks calculator with live total and average previews, input validation, subject-level result indicators, and print-friendly reports.
-
-Repository: [Marks Calculator](https://github.com/sivakumar9867/marks-calculator)
-
-## AWS Hands-on Experience
-
-The portfolio includes a dedicated AWS section covering one featured VPC Peering project and 17 additional hands-on tasks.
-
-### Featured Project — AWS VPC Peering
-
-Demonstrates private communication between two VPCs using:
-- VPC Peering.
-- Route table configuration.
-- EC2 instances.
-- Security groups.
-- SSH and ICMP connectivity testing.
-- Network troubleshooting.
-
-Repository: [EWB AWS Internship](https://github.com/sivakumar9867/EWB-AWS-Internship)
-
-### AWS Task Categories
-
-**Networking & Security**
-- VPC and private subnet configuration.
-- Security Groups.
-- Network ACLs.
-- Route 53 Private DNS.
-
-**Compute, Storage & Hosting**
-- EC2 and Application Load Balancer.
-- Launch Templates and Auto Scaling.
-- S3 static website hosting and versioning.
-- EBS volumes.
-- EFS lifecycle and monitoring.
-
-**Identity, Data & Monitoring**
-- IAM users, groups, and permissions.
-- Lambda versions and aliases.
-- RDS MySQL.
-- DynamoDB Streams.
-- CloudWatch alarms.
-
-Each task has a preview image, technical steps, learning outcomes, and an individual evidence PDF.
-
-## Technical Skills
-
-**Programming and Computer Science**
-- C++
-- C
-- Python
-- SQL fundamentals
-- Data Structures and Algorithms
-- Object-Oriented Programming
-- Problem Solving
-
-**Development**
-- Flask
-- HTML
-- CSS
-- JavaScript
-- Web Application Development
-
-**AI and Machine Learning**
-- Machine Learning
-- Generative AI
-- Prompt Engineering
-- Scikit-learn
-- Data Preprocessing
-- Feature Engineering
-- Model Evaluation
-
-**Tools and Workflow**
-- Git
-- GitHub
-- VS Code
-- Debugging
-- Software Testing
-- Input Validation
-- Documentation
-
-**AWS and Cloud**
-- Amazon VPC and VPC Peering
-- CIDR and IP Addressing
-- Route Tables
-- Public and Private Subnets
-- Security Groups and Network ACLs
-- EC2
-- IAM
-- Elastic Load Balancing
-- Auto Scaling
-- S3, EBS, and EFS
-- Lambda
-- RDS
-- DynamoDB
-- Route 53
-- CloudWatch
-
-## Internship Experience
-
-The portfolio presents the following internship experiences:
-
-- **Machine Learning Intern:** IBM SkillsBuild and Edunet Foundation — Employee Salary Prediction.
-- **Python Intern:** APSSDC — Python programming and Flask-based marks calculator.
-- **Generative AI Intern:** Prodigy InfoTech — Generative AI concepts and practical AI-assisted workflows.
-- **AWS Cloud Computing Intern:** EWB Edutech Private Limited — VPC networking, route tables, security groups, EC2 access, VPC Peering, and connectivity troubleshooting.
-
-Internship certificate previews and available original certificate files are included in the repository.
-
-## Certifications and Academic Recognition
-
-The portfolio includes:
-- SAP Certified – SAP Generative AI Developer.
-- Internship completion certificates.
-- AWS, Azure, Python, AI/ML, and programming-related credentials.
-- Additional learning certificates with previews and source documents where available.
-- Academic Honors & Scholarships, including the Yuva Unstoppable Merit Scholarship.
-
-## Document Viewer
-
-The separate `document.html` page provides a dedicated viewer for local PDF and image assets.
-
-It supports:
-- Viewing PDF documents and certificate images.
-- Navigation back to the portfolio.
-- Download actions for supported documents.
-- Image viewing controls, including zoom and download.
-
-Local document links use the document viewer. External destinations such as GitHub repositories, LinkedIn, and certification verification links open in a new tab.
-
-## Repository Structure
+## Folder structure
 
 ```text
-sivakumar9867.github.io/
-│
-├── index.html
-├── document.html
-├── README.md
+.
+├── assets/
+│   ├── aws-vpc-peering/    # VPC Peering evidence screenshots
+│   ├── aws-vpc-peering-architecture.svg
+│   ├── aws-previews/       # AWS task preview images
+│   ├── aws-proofs/         # Individual AWS evidence PDFs
+│   ├── certificates/      # Certificate originals and selected PNGs
+│   ├── previews/           # Certificate card previews
+│   └── Siva_Kumar_Resume.pdf
 ├── CNAME
-│
-└── assets/
-    ├── Siva_Kumar_Resume.pdf
-    ├── aws-vpc-peering-architecture.svg
-    ├── aws-vpc-peering/
-    ├── aws-previews/
-    ├── aws-proofs/
-    ├── certificates/
-    └── previews/
+├── index.html
+├── project.html
+├── aws-project.html
+├── document.html
+└── README.md
 ```
 
 ## Deployment
 
-The project is a static website hosted using GitHub Pages.
-
-The repository includes a `CNAME` file for the custom domain.
-
-To maintain the deployment:
-
-1. Keep `index.html` and `document.html` in the repository root.
-2. Preserve the `assets/` folder and its relative paths.
-3. Configure GitHub Pages to deploy from the intended branch.
-4. Keep the custom domain configured through the `CNAME` file.
-
-No backend server or package installation is required to serve the static portfolio.
+Static HTML, CSS and JavaScript site intended for GitHub Pages. Keep the complete `assets/` folder beside all four HTML files so relative image, certificate, resume and evidence links continue to work.
 
 ## Contact
 
-- **Portfolio:** [sivakumar.tech](https://sivakumar.tech)
-- **GitHub:** [github.com/sivakumar9867](https://github.com/sivakumar9867)
-- **LinkedIn:** [linkedin.com/in/sivakumar986](https://linkedin.com/in/sivakumar986)
-- **Email:** sivakumar986@outlook.com
+- Email: sivakumar986@outlook.com
+- LinkedIn: https://linkedin.com/in/sivakumar986
+- GitHub: https://github.com/sivakumar9867
 
----
+## Design credit
 
-**Designed and maintained by Siva Kumar.**
+The interface design process was guided by [UnsLOP](https://github.com/heydamir/unslop) by Damir Sokolovsky, licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+The visible site edition label is **Portfolio 2026**.
+
+
+## Profile image
+
+The About/Profile section uses the original profile photograph at `assets/siva-kumar-profile.png`.
+
+## Latest visual refinements
+
+- The navigation brand uses the supplied Siva Kumar portrait at the same 36 × 36 px footprint as the former SK stamp.
+- The About section keeps the introduction and the Education, Target Roles and Goals panels without a duplicate profile card.
+- Project screenshot links use compact AWS-style outlined controls aligned to a shared baseline within each evidence row.
