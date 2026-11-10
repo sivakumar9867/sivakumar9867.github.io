@@ -84,4 +84,3 @@ The About/Profile section uses the original profile photograph at `assets/siva-k
 
 - The navigation brand uses the supplied Siva Kumar portrait at the same 36 × 36 px footprint as the former SK stamp.
 - The About section keeps the introduction and the Education, Target Roles and Goals panels without a duplicate profile card.
-- Project screenshot links use compact AWS-style outlined controls aligned to a shared baseline within each evidence row.
