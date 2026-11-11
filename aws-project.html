@@ -263,9 +263,196 @@ a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visi
   border:1px solid var(--rule);
 }
 
+
+
+/* AWS evidence galleries: align headings, descriptions, image starts and actions. */
+.aws-detail-evidence-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  align-items:stretch;
+  gap:12px;
+}
+.aws-detail-evidence,
+.aws-evidence-item{
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  min-width:0;
+  box-sizing:border-box;
+}
+.aws-detail-evidence h3,
+.aws-evidence-item h3{
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  height:2.8em;
+  min-height:2.8em;
+  flex:0 0 2.8em;
+  overflow:hidden;
+  line-height:1.3;
+  box-sizing:border-box;
+}
+.aws-detail-evidence p,
+.aws-evidence-item p{
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:3;
+  height:4.5em;
+  min-height:4.5em;
+  flex:0 0 4.5em;
+  overflow:hidden;
+  line-height:1.5;
+  box-sizing:border-box;
+}
+.aws-detail-evidence img,
+.aws-evidence-item img,
+.aws-task-detail-preview{
+  display:block;
+  width:100%;
+  height:auto;
+  min-height:0;
+  max-height:none;
+  flex:0 0 auto;
+  aspect-ratio:1.88 / 1;
+  object-fit:contain;
+  object-position:center;
+  box-sizing:border-box;
+  background:var(--surface);
+  border:1px solid var(--rule);
+}
+.aws-detail-evidence .aws-evidence-full,
+.aws-evidence-item>a{
+  align-self:flex-start;
+  margin-top:auto;
+}
+.aws-detail-evidence .aws-evidence-full{margin-top:auto}
+.aws-task-detail-preview{margin:13px 0}
+@media(max-width:680px){
+  .aws-detail-evidence-grid{grid-template-columns:1fr}
+  .aws-detail-evidence h3,
+  .aws-detail-evidence p,
+  .aws-evidence-item h3,
+  .aws-evidence-item p{
+    display:block;
+    height:auto;
+    min-height:0;
+    flex:0 0 auto;
+    overflow:visible;
+  }
+  .aws-detail-evidence img,
+  .aws-evidence-item img,
+  .aws-task-detail-preview{
+    width:100%;
+    height:auto;
+    min-height:0;
+    flex:0 0 auto;
+    aspect-ratio:1.88 / 1;
+  }
+}
+
+
+
+/* Shared screenshot fit: preserve the existing frame dimensions and show the complete capture. */
+.detail-shot img,
+.sap-gallery img,
+.aws-task-preview img,
+.aws-report-cover-preview,
+.aws-task-detail-preview,
+.aws-detail-image,
+.aws-evidence-item img,
+.aws-detail-evidence img{
+  object-fit:contain!important;
+  object-position:center!important;
+  background:var(--surface)!important;
+}
+
+
+
+/* AWS screenshot galleries: natural image-sized frames, neutral backgrounds, shared top baseline. */
+.aws-detail-evidence-grid{
+  align-items:stretch;
+  grid-auto-rows:1fr;
+}
+.aws-detail-evidence{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  height:100%;
+  box-sizing:border-box;
+}
+.aws-detail-evidence h3{
+  line-height:1.3;
+  min-height:2.6em;
+}
+.aws-detail-evidence p{
+  line-height:1.5;
+  min-height:3em;
+}
+.aws-detail-evidence img{
+  display:block;
+  width:100%;
+  height:auto;
+  min-height:0;
+  max-height:none;
+  aspect-ratio:auto;
+  object-fit:unset;
+  object-position:center;
+  margin:0;
+  border:1px solid var(--rule);
+  box-sizing:border-box;
+  background:var(--surface);
+}
+.aws-detail-evidence .aws-evidence-full{
+  align-self:flex-start;
+  margin-top:auto;
+  padding-top:10px;
+}
+.aws-task-preview{
+  display:block;
+  width:100%;
+  height:auto;
+  min-height:0;
+  aspect-ratio:auto;
+  overflow:visible;
+  background:transparent;
+  border:0;
+}
+.aws-task-preview img{
+  display:block;
+  width:100%;
+  height:auto;
+  min-height:0;
+  max-height:none;
+  aspect-ratio:auto;
+  object-fit:unset;
+  object-position:center;
+  margin:0;
+  border:1px solid var(--rule);
+  box-sizing:border-box;
+  background:var(--surface);
+}
+.aws-task-detail-preview{
+  display:block;
+  width:100%;
+  height:auto;
+  min-height:0;
+  max-height:none;
+  aspect-ratio:auto;
+  object-fit:unset;
+  object-position:center;
+  border:1px solid var(--rule);
+  box-sizing:border-box;
+  background:var(--surface);
+}
+@media(max-width:680px){
+  .aws-detail-evidence-grid{grid-template-columns:1fr;grid-auto-rows:auto}
+  .aws-detail-evidence h3,
+  .aws-detail-evidence p{min-height:0}
+}
+
 </style></head><body><div class="progress" id="progress"></div><header class="nav" id="nav"><div class="wrap navin">
 <a aria-label="Siva Kumar — home" class="brand" href="./index.html#home"><img class="brand-photo" src="./assets/siva-kumar-profile.png" alt="Siva Kumar" width="36" height="36" loading="eager"/><span class="brand-name">Siva Kumar<small>Developer · AI · Automation</small></span></a>
-<nav class="navlinks" id="navlinks"><a href="./index.html#about">About</a><a href="./index.html#experience">Experience</a><a href="./index.html#projects">Projects</a><a href="./index.html#aws">AWS Labs</a><a href="./index.html#skills">Skills</a><a href="./index.html#certificates">Credentials</a><a href="./index.html#academic-honors">Honors</a><a href="./index.html#contact">Contact</a></nav>
+<nav class="navlinks" id="navlinks"><a href="./index.html#about">About</a><a href="./index.html#experience">Experience</a><a href="./index.html#projects">Projects</a><a href="./index.html#aws">AWS Labs</a><a href="./index.html#skills">Skills</a><a href="./index.html#certificates">Certificates</a><a href="./index.html#academic-honors">Honors</a><a href="./index.html#contact">Contact</a></nav>
 <a class="nav-cta" href="./document.html?file=assets%2FSiva_Kumar_Resume.pdf&amp;title=Resume&amp;back=home">Resume ↓</a><button aria-expanded="false" aria-label="Toggle navigation" class="menu-btn" id="menuBtn">Menu +</button>
 </div></header><main class="wrap aws-detail-main"><div id="aws-detail-content"></div></main><footer class="wrap"><span>© 2026 DERANGULA SIVA KUMAR</span><span>Computer Science · AI · Software Development</span><span class="credit">Interface crafted by Siva Kumar</span></footer>
 <script>

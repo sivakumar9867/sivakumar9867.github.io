@@ -6,15 +6,16 @@ Personal portfolio for **Derangula Siva Kumar**, a Computer Science & Engineerin
 
 ## Introduction
 
-The homepage introduces Siva Kumar as a developer focused on building scalable applications and automating workflows to turn ideas into execution. The visual direction is an **engineering fieldbook**: warm paper surfaces, graphite typography, restrained oxide-copper accents, numbered notes and evidence-led project storytelling. The hero includes a six-slide, manually navigable field-note carousel covering the five selected projects and the featured AWS VPC Peering build. Its slide counter is fixed in a consistent footer position.
+The homepage introduces Siva Kumar as a developer focused on building scalable applications and automating workflows to turn ideas into execution. The visual direction is an **engineering fieldbook**: warm paper surfaces, graphite typography, restrained oxide-copper accents, numbered notes and evidence-led project storytelling. The hero includes a seven-slide, manually navigable field-note carousel covering the five selected software projects, the ongoing LeetCode / DSA practice feature and the featured AWS VPC Peering build. Its slide counter is fixed in a consistent footer position.
 
 ## Portfolio sections
 
-- About, education, professional interests and internship experience
+- About, education, professional interests and an Experience timeline covering four internship experiences
 - Five selected projects, each with its own internal project-detail page, repository link and README link
+- LeetCode / DSA practice feature linking to a C++ repository with problem-wise solutions, topic-wise practice and a progress dashboard
 - Skills across programming, development, tools, AI/ML and AWS cloud technologies
 - AWS Labs: a featured VPC Peering detail page and 17 individual AWS task detail pages, with previews, technical steps, learning outcomes and evidence PDFs
-- Internship certificates, including the SAP Generative AI Developer certification and original EWB AWS internship completion certificate
+- Certificates, including internship credentials, the SAP Generative AI Developer certification and the NPTEL Elite Introduction to Internet of Things certificate
 - Additional certificates with previews and source documents
 - Academic Honors & Scholarships, including the Yuva Unstoppable Merit Scholarship
 - Contact links, downloadable resume and a document viewer for PDFs and certificate images
@@ -28,6 +29,14 @@ The homepage introduces Siva Kumar as a developer focused on building scalable a
 5. [Personal Portfolio Website](https://github.com/sivakumar9867/sivakumar9867.github.io) — responsive portfolio built with HTML, CSS and JavaScript, deployed through GitHub Pages with a custom domain, project case studies, document viewer and AWS evidence.
 
 Each project case study opens at `project.html?project=<project-id>` in the **same browser tab**. It retains the Fieldbook navigation and offers Back to Projects and Back to Portfolio controls.
+
+## DSA practice
+
+The [LeetCode Solutions repository](https://github.com/sivakumar9867/leetcode-solutions) is presented as a half-width project-style card within the selected-work grid, using the same visual panel and content layout as the other cards. It contains C++ problem-wise solutions, topic-wise practice and an automatically maintained progress dashboard. The card links to the repository, the progress dashboard and the root README; live practice statistics remain in the repository dashboard rather than being hardcoded on the website.
+
+## Experience and certificates
+
+The Experience timeline presents four internship experiences. The NPTEL **Introduction to Internet of Things** certificate is featured separately in the Certificates section. The 12-week course ran from July–October 2026 and was completed with an Elite certificate, a 62% consolidated score, 25/25 in online assignments, 36.75/75 in the proctored exam and 4 recommended credits. The original certificate is available at `assets/certificates/nptel-introduction-to-internet-of-things.pdf` through the website's document viewer.
 
 ## AWS hands-on work
 
@@ -46,8 +55,8 @@ Local resume, certificate and AWS evidence links open through `document.html`. I
 │   ├── aws-vpc-peering-architecture.svg
 │   ├── aws-previews/       # AWS task preview images
 │   ├── aws-proofs/         # Individual AWS evidence PDFs
-│   ├── certificates/      # Certificate originals and selected PNGs
-│   ├── previews/           # Certificate card previews
+│   ├── certificates/      # Certificate originals and selected previews
+│   ├── previews/           # Additional certificate previews
 │   └── Siva_Kumar_Resume.pdf
 ├── CNAME
 ├── index.html
@@ -70,8 +79,6 @@ Static HTML, CSS and JavaScript site intended for GitHub Pages. Keep the complet
 ## Crafted by
 
 Designed, developed and crafted by **Derangula Siva Kumar**. The portfolio's content, implementation, page structure and custom refinements were created for this personal website.
-
-
 
 ## Profile image
 
