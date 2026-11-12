@@ -85,7 +85,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
    download.style.display='none';return;
  }
  const filename=(remoteImage?new URL(raw).pathname:raw).split('/').pop()||'download';
- download.href=raw;download.setAttribute('download',filename);
+ const resumeAsset=raw.toLowerCase().endsWith('/siva_kumar_resume.pdf');const cacheBustedRaw=resumeAsset?raw+'?v=20261112-2':raw;download.href=cacheBustedRaw;download.setAttribute('download',filename);
  async function saveImageFile(){
    if(!remoteImage){const a=document.createElement('a');a.href=raw;a.download=filename;document.body.appendChild(a);a.click();a.remove();return;}
    try{const response=await fetch(raw,{mode:'cors',cache:'no-store'});if(!response.ok)throw new Error('Download failed');const blob=await response.blob();const objectUrl=URL.createObjectURL(blob);const a=document.createElement('a');a.href=objectUrl;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(objectUrl),1500);}
@@ -121,7 +121,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
    document.getElementById('print-image').addEventListener('click',function(){window.print();});
    window.addEventListener('resize',function(){if(fitMode)fitImage();});
    imageDownload.addEventListener('click',function(e){if(remoteImage){e.preventDefault();saveImageFile();}});
- }else{document.getElementById('pdf').src=raw+'#view=FitH';}
+ }else{document.getElementById('pdf').src=cacheBustedRaw+'#view=FitH';}
 })();
 </script>
 </body></html>
