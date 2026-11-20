@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sivakumar.tech/sitemap.xml
