@@ -53,6 +53,8 @@ Local resume, certificate and AWS evidence links open through `document.html`. I
 ├── assets/
 │   ├── aws-vpc-peering/    # VPC Peering evidence screenshots
 │   ├── aws-vpc-peering-architecture.svg
+│   ├── aws-vpc-peering-project-report.pdf
+│   ├── aws-vpc-peering-target-architecture.png
 │   ├── aws-previews/       # AWS task preview images
 │   ├── aws-proofs/         # Individual AWS evidence PDFs
 │   ├── certificates/      # Certificate originals and selected previews
@@ -63,12 +65,13 @@ Local resume, certificate and AWS evidence links open through `document.html`. I
 ├── project.html
 ├── aws-project.html
 ├── document.html
+├── human-centered-ai-resume.html
 └── README.md
 ```
 
 ## Deployment
 
-Static HTML, CSS and JavaScript site intended for GitHub Pages. Keep the complete `assets/` folder beside all four HTML files so relative image, certificate, resume and evidence links continue to work.
+Static HTML, CSS and JavaScript site intended for GitHub Pages. Keep the complete `assets/` folder beside all five HTML files, including `human-centered-ai-resume.html`, so relative image, certificate, resume and evidence links continue to work.
 
 ## Contact
 
