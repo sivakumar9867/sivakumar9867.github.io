@@ -96,12 +96,12 @@ The original profile PNG and certificate PNG/PDF files are retained. The origina
 
 ## Accessibility and loading
 
-The six primary certificate cards in the homepage Certificates section start loading eagerly and use asynchronous image decoding, so they can be ready before visitors scroll to that section. The longer Additional Certifications gallery remains lazy-loaded to avoid fetching every lower-page thumbnail during initial page load.
+All 21 certificate previews across the homepage Certificates and Additional Certifications sections start loading eagerly. This begins their downloads as the browser parses the page, rather than waiting for visitors to approach each gallery. The previews total approximately 2.12 MB; the original certificate PDFs and image files remain unchanged.
 
 - Main pages include a keyboard-accessible “Skip to main content” link and a focusable main landmark.
 - The shared muted text colour was darkened to improve contrast against the site's paper and card backgrounds.
 - Google Fonts use stylesheet links with preconnect hints rather than CSS `@import`.
-- Certificate-card images use lazy loading and asynchronous decoding; reduced-motion preferences and visible keyboard focus styles are retained.
+- Certificate-card previews load eagerly and use the browser-selected decoding strategy; reduced-motion preferences and visible keyboard focus styles are retained.
 
 ## Latest visual refinements
 
