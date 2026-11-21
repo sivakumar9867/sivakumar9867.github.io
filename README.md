@@ -58,7 +58,7 @@ Local resume, certificate and AWS evidence links open through `document.html`. I
 │   ├── aws-previews/       # AWS task preview images
 │   ├── aws-proofs/         # Individual AWS evidence PDFs
 │   ├── certificates/      # Certificate originals and selected previews
-│   ├── previews/           # Additional certificate previews
+│   ├── previews/           # Optimized WebP thumbnails and other certificate previews
 │   └── Siva_Kumar_Resume.pdf
 ├── CNAME
 ├── index.html
@@ -83,11 +83,25 @@ Static HTML, CSS and JavaScript site intended for GitHub Pages. Keep the complet
 
 Designed, developed and crafted by **Derangula Siva Kumar**. The portfolio's content, implementation, page structure and custom refinements were created for this personal website.
 
-## Profile image
+## Image assets and optimization
 
-The About/Profile section uses the original profile photograph at `assets/siva-kumar-profile.png`.
+The site uses lightweight WebP thumbnails for images that appear in the page layout:
+
+- `assets/previews/siva-kumar-profile.webp` — the 36 × 36 px navigation portrait used across the homepage, project details, AWS details and document viewer.
+- `assets/previews/ewb-aws-internship-completion.webp` — AWS internship certificate card preview.
+- `assets/previews/sap-certified-generative-ai-developer.webp` — SAP certification card preview.
+- `assets/previews/nptel-introduction-to-internet-of-things.webp` — NPTEL IoT certificate card preview.
+
+The original profile PNG and certificate PNG/PDF files are retained. The original profile image remains available for social-preview metadata, while the original certificate documents are opened in the document viewer for full-quality viewing and download. The four WebP thumbnails total 115,556 bytes, compared with 4,519,195 bytes for the corresponding original PNGs (approximately 97.4% less image data for these four page thumbnails).
+
+## Accessibility and loading
+
+- Main pages include a keyboard-accessible “Skip to main content” link and a focusable main landmark.
+- The shared muted text colour was darkened to improve contrast against the site's paper and card backgrounds.
+- Google Fonts use stylesheet links with preconnect hints rather than CSS `@import`.
+- Certificate-card images use lazy loading and asynchronous decoding; reduced-motion preferences and visible keyboard focus styles are retained.
 
 ## Latest visual refinements
 
-- The navigation brand uses the supplied Siva Kumar portrait at the same 36 × 36 px footprint as the former SK stamp.
+- The navigation brand uses the optimized Siva Kumar WebP portrait at the same 36 × 36 px footprint as the former SK stamp.
 - The About section keeps the introduction and the Education, Target Roles and Goals panels without a duplicate profile card.
